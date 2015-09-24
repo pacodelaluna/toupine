@@ -42,4 +42,5 @@ gem 'spree', '2.4'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'rails-i18n'
+gem 'capistrano', '~> 2.15'
 
