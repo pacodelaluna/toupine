@@ -1,0 +1,48 @@
+<% @body_id = 'cart' %>
+<section class="page_panier">
+  <div class="categories">
+    <div class="categories_content">
+      <h2><a href="/boutique">Boutique</a></h2>
+      <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
+      <%= render :partial => 'spree/shared/left_taxo' %>
+    </div>
+  </div>
+  <div class="recapitulatif_panier">
+    <div class="panier_content recap">
+      <h2><%= Spree.t(:shopping_cart) %></h2>
+      <% if @order.line_items.empty? %>
+        <div class="panier_vide">
+          <p><%= Spree.t(:your_cart_is_empty) %></p>
+          <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue inline_link' %></p>
+        </div>
+      <% else %>
+      <div class="panier_recap">
+
+        <%= form_for @order, :url => update_cart_path, :html => {:id => 'update-cart'} do |order_form| %>
+          <div data-hook="inside_cart_form">
+
+            <div data-hook="cart_items">
+              <%= render :partial => 'form', :locals => { :order_form => order_form } %>
+            </div>
+            
+          </div>
+        <% end %>
+        <table id="cart_buttons" >
+          <tr>
+            <td class="td_before_empty_cart"></td>
+            <td class="td_empty_cart">
+              <div id="empty-cart">
+                <%= form_tag empty_cart_path, :method => :put do %>
+                  <p id="clear_cart_link">
+                  <%= submit_tag Spree.t(:empty_cart), :class => 'reset_cart' %>
+                  </p>
+                <% end %>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</section>

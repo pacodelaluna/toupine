@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link rel="icon" type="type/png" href="/assets/favico.png" />
+</head>
+<body>
+<div id="site_container">
+  	<header>
+        <ul class="menu">
+          <li class="sml_logo"><a href="/"><%= image_tag "sml_logo.png" %></a></li>
+          <li><a href="/products">Boutique</a></li>
+          <li><a href="#">Présentation</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="/distributeurs">Distributeurs</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+        <ul class="commands">
+          <li class="socials">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+          </li>
+          <li class="btn">
+            <div class="select_style_lang">
+              <select>
+                <option>Français</option>
+                <option>English</option>
+              </select>
+            </div>
+          </li>
+          <li class="btn"><% if spree_current_user %>
+              <%= link_to 'Deconnexion', spree_logout_path, :method => :delete %>
+            <% else %>
+              <%= link_to 'Connexion', spree_login_path %> / <%= link_to 'Inscription', spree_signup_path %>
+            <% end %></li>  
+          <li class="cart"><a href="/cart"><i class="fa fa-shopping-cart"></i><span id="link-to-cart"></span></a></li>
+        </ul>
+
+        <div class="toggle_container" id="toggle_command"><div class="toggle"></div></div>
+      </header>
+
+
+
+    	<%= yield %>
+
+      <% if controller.controller_name != 'home' %>
+      <section class="reassurances spree_reassurances">
+        <div class="reassurances_content">
+          <article>
+            <div class="reassur_icon">
+              <span class="reassur_phone"><i class="fa fa-phone"></i></span>
+            </div>
+            <div class="reassur_infos">
+              <h3>Une Question?</h3>
+              <p>
+                Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="reassur_icon">
+              <span><i class="fa fa-truck"></i></span>
+            </div>
+            <div class="reassur_infos">
+              <h3>Une Question?</h3>
+              <p>
+                Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="reassur_icon">
+              <span><i class="fa fa-credit-card"></i></span>
+            </div>
+            <div class="reassur_infos">
+              <h3>Une Question?</h3>
+              <p>
+                Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="trouver_revendeur">
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+          function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var mapOptions = {
+              center: new google.maps.LatLng(43.8909896, 4.7450029),
+              zoom: 12,
+              scrollwheel: false,
+              disableDefaultUI: true,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+
+            var infowindow = null;
+
+          }
+
+          google.maps.event.addDomListener(window, 'load', initialize);
+
+        </script>
+        <div id="map_canvas" style="width:100%;height:200px;"></div>
+        <h1><a href="/revendeurs"><span>Touver une boutique</span></a></h1>
+      </section>
+      <% end %>
+    	<footer>
+        <section class="adresse">
+          <%= image_tag "logo_white.png" %>
+          <p class="phone_number">04 90 99 93 93</p>
+          <p class="mail_address">contact@toupine-cabesselle.com</p>
+          <p class="address">
+            259 Chemin de FontGisclar<br>
+            13570 Barbentane
+          </p>
+        </section>
+        <section class="boutique">
+          <h2>Boutique</h2>
+          <ul>
+            <li><a href="#">Nous contacter</a></li>
+            <li><a href="#">Qui sommes nous?</a></li>
+            <li><a href="#">Conditions générales de vente</a></li>
+            <li><a href="#">Livraison</a></li>
+            <li><a href="#">Paiement sécurisé</a></li>
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Touver un revendeur</a></li>
+            <li><a href="#">Mon compte</a></li>
+          </ul>
+        </section>
+        <section class="blog">
+          <h2>Blog</h2>
+          <ul>
+            <li><a href="#">blabla</a></li>
+            <li><a href="#">blabla</a></li>
+            <li><a href="#">blabla</a></li>
+          </ul>
+        </section>
+        <section class="autre">
+          <h2>Mode de paiement</h2>
+          <p class="pay">
+            <i class="fa fa-cc-visa"></i>
+            <i class="fa fa-cc-mastercard"></i>
+            <i class="fa fa-cc-paypal"></i>
+            <i class="fa fa-money"></i>
+          </p>
+          <h2>Suivez nous!</h2>
+          <p class="socials">
+              <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></i></a>
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></i></a>
+              <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+              <a href="#" class="pinterest"><i class="fa fa-google-plus-square"></i></a>
+          </p>    
+        </section>
+      </footer>
+      <div class="footer">
+          © Copyright Toupine &amp; Cabeselle 2015 - CGV - <a href="#">Mentions Légales</a> - Réalisation/Design <a href="http://www.odevie.org">Odevie</a>
+      </div>
+    </div>
+  	
+
+</body>
+</html>

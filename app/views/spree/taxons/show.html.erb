@@ -1,0 +1,26 @@
+<section class="logo_headline logo_distributeurs">
+    <%= image_tag "logo.png" %>
+</section>
+
+<section class="content_produit">
+  <div class="categories">
+    <div class="categories_content">
+      <h2><a href="/boutique">Boutique</a></h2>
+      <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
+      <%= render :partial => 'spree/shared/left_taxo' %>
+    </div>
+  </div>
+  <div class="liste">
+    <h2><%= @taxon.name %></h2>
+    <div class="liste_content">
+       <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+    </div>
+  </div>
+  <% unless params[:keywords].present? %>
+  <div data-hook="taxon_children">
+    <% cache [I18n.locale, @taxon] do %>
+      <%= render partial: 'taxon', collection: @taxon.children %>
+    <% end %>
+  </div>
+<% end %>
+</section>

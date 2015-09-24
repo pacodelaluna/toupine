@@ -1,0 +1,42 @@
+<%
+  paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+
+<% content_for :head do %>
+  <% if paginated_products.respond_to?(:num_pages) %>
+    <%= rel_next_prev_link_tags paginated_products %>
+  <% end %>
+<% end %>
+
+<% if products.any? %>
+
+  <% products.each do |product| %>
+    <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
+      <div class="item">
+        <div class="item_overlay"></div>
+        <div class="item_content">
+          <% image = product_images(product) %>
+          <% if image && image.attachment %>
+            <%= link_to [spree, product] do %>
+              <%= image_tag image.attachment.url(:product) %>
+            <% end %>
+          <% end %>
+          <div class="infos">
+            <div class="infos_overlay"><a href="#">Ajouter au panier</a></div>
+            <div class="infos_left">
+              <p><%= link_to product.name, url %></p>
+              <p class="poids"><%= product.weight.to_i %> g</p>
+            </div>
+            <div class="infos_right">
+              <%= display_price(product) %>
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+<% end %>
+
+<% if paginated_products.respond_to?(:num_pages) %>
+  <%= paginate paginated_products %>
+<% end %>

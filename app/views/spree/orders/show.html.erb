@@ -1,0 +1,15 @@
+<div id="validation" class="recap">
+  <h2>Votre commande <%= @order.number %> est validée</h2>
+  <% if order_just_completed?(@order) %>
+    <strong>Merci de nous faire confiance, vous trouverez ci dessous les details de votre commande!</strong>
+  <% end %>
+
+  <div id="order">
+    <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
+
+    <p class="empty_cart">
+      <%= link_to "Retour à la boutique", products_path, :class => 'inline_green_link' %>
+      <%= link_to "Voir tous nos lieux de retrait" , "/lieux_de_vente", :class => 'inline_green_link' %>
+    </p>
+  </div>
+</div>

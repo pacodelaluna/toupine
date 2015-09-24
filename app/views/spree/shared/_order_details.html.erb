@@ -1,0 +1,30 @@
+<table id="cart-detail">
+  <thead>
+    <tr>
+        <th class="cart-item-description-header" colspan="2"><%= Spree.t(:item) %></th>
+        <th class="cart-item-quantity-header"><%= Spree.t(:qty) %></th>
+        <th class="cart-item-price-header"><%= Spree.t(:price) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% order.line_items.each do |item| %>
+      <tr class="stock-item">
+        <td class="cart-item-image"><%= small_image(item.variant) %></td>
+        <td class="cart-item-description">
+          <h4><%= item.variant.name %></h4>
+          <p class="line-item-description" >
+          <%= item.variant.description %>
+          </p>
+        </td>
+        <td class="cart-item-price"><%= item.quantity %></td>
+        <td class="cart-item-total"><%= display_price(item.variant) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tr class="cart-total validation_line">
+    <td colspan="3" align='right'><h5><%= Spree.t(:total) %>&nbsp;&nbsp;&nbsp;</h5></td>
+    <td><h5><%= order.display_total.to_html %></h5></td>
+  </tr>
+  </tfoot>
+</table>

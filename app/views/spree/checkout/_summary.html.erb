@@ -1,0 +1,56 @@
+<h3><%= Spree.t(:order_summary) %></h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td class="order_summary_label"><%= Spree.t(:item_total) %>:</td>
+      <td class="order_summaty_number"><%= order.display_item_total.to_html %></td>
+    </tr>
+
+    <% if order.line_item_adjustments.nonzero.exists? %>
+      <tbody>
+        <% order.line_item_adjustments.nonzero.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+          <tr class="total">
+            <td ><%= label %></td>
+            <td class="order_summaty_number"><%= Spree::Money.new(adjustments.sum(&:amount), currency: order.currency).to_html %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    <% end %>
+
+    <% if order.passed_checkout_step?("delivery") && order.shipments.any? %>
+      <tr>
+        <td><%= Spree.t(:shipping_total) %>:</td>
+        <td class="order_summaty_number"><%= Spree::Money.new(order.shipments.to_a.sum(&:cost), currency: order.currency).to_html %></td>
+      </tr>
+
+      <% if order.shipment_adjustments.nonzero.exists? %>
+        <tbody>
+          <% order.shipment_adjustments.nonzero.promotion.eligible.group_by(&:label).each do |label, adjustments| %>
+            <tr class="total">
+              <td><%= label %>:</td>
+              <td class="order_summaty_number"><%= Spree::Money.new(adjustments.sum(&:amount), currency: order.currency).to_html %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      <% end %>
+    <% end %>
+
+    <% if order.adjustments.nonzero.eligible.exists? %>
+      <tbody id="summary-order-charges">
+        <% order.adjustments.nonzero.eligible.each do |adjustment| %>
+        <% next if (adjustment.source_type == 'Spree::TaxRate') and (adjustment.amount == 0) %>
+          <tr class="total">
+            <td><%= adjustment.label %>:</td>
+            <td class="order_summaty_number"><%= adjustment.display_amount.to_html %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    <% end %>
+
+    <tr>
+      <td><strong><%= Spree.t(:order_total) %>:</strong></td>
+      <td class="order_summaty_number"><strong><span id='summary-order-total'><%= order.display_total.to_html %></span></strong></td>
+    </tr>
+  </tbody>
+</table>

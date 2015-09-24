@@ -1,0 +1,135 @@
+<section class="logo_headline">
+  <%= image_tag "logo.png" %>
+</section>
+
+<section class="hero">
+  <div class="hero_content strech" data-stretch="/assets/hero.jpg">
+    <h1>Des fruits et des légumes savoureux, gorgés de soleil.</h1>
+    <a href="/boutique">Découvrez nos produits</a>
+  </div>
+</section>
+
+<section class="identity">
+  <div class="identity_content">
+    <div class="half strech" id="hero_two" data-stretch="/assets/cofee.jpg">
+      
+    </div>
+    <div class="half">
+      <div class="line">
+        <div class="half uu" ><img src="/assets/u.png" class="u"/></div>
+        <div class="half strech" data-stretch="/assets/croquant.jpg"></div>
+      </div>
+      <div class="line">
+        <div class="half strech glace" data-stretch="/assets/glace.jpg"></div>
+        <div class="half presentation" >
+          <div class="presentation_content">
+            <h2>Épicerie fine Provençale</h2>
+            <p>Toupine et Cabesselle vous propose  une sélection de produits gastronomiques. Chacun est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="selection home_selection">
+  <h2><span>Sélection de produits de saison</span></h2>
+  <div class="selection_precontent">
+    <div class="selection_content">
+      <%= render partial: 'spree/shared/products', locals: { products: @hp_taxon.products.limit(4), taxon: @hp_taxon } %>
+    </div>
+    <div class="link_to_selection_content">
+      <a href="#" class="link_to_selection">Voir la sélection complète</a>
+    </div>
+  </div>
+</section>
+
+<section class="home_categories">
+  <div class="home_categories_content">
+    <div class="item">
+      <div class="mid_item">
+        <img src="/assets/cat11.jpg"/>
+        <h3><a href="#">Produits sucrés</a></h3>
+      </div>
+      <div class="mid_item">
+         <img src="/assets/cat12.jpg"/>
+        <h3><a href="#">Produits salés</a></h3>
+      </div>
+    </div>
+    <div class="item">
+      <img src="/assets/cat1.jpg"/>
+      <h3><a href="#">Nouveautés</a></h3>
+    </div>
+    <div class="item">
+      <img src="/assets/cat2.jpg"/>
+      <h3><a href="#">Promotions</a></h3>
+    </div>
+    <div class="item">
+      <img src="/assets/cat3.jpg"/>
+      <h3><a href="#">Accessoires</a></h3>
+    </div>      
+  </div>
+</section>
+
+
+<section class="reassurances">
+  <div class="reassurances_content">
+    <article>
+      <div class="reassur_icon">
+        <span class="reassur_phone"><i class="fa fa-phone"></i></span>
+      </div>
+      <div class="reassur_infos">
+        <h3>Une Question?</h3>
+        <p>
+
+          Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+        </p>
+      </div>
+    </article>
+    <article>
+      <div class="reassur_icon">
+        <span><i class="fa fa-truck"></i></span>
+      </div>
+      <div class="reassur_infos">
+        <h3>Une Question?</h3>
+        <p>
+          Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+        </p>
+      </div>
+    </article>
+    <article>
+      <div class="reassur_icon">
+        <span><i class="fa fa-credit-card"></i></span>
+      </div>
+      <div class="reassur_infos">
+        <h3>Une Question?</h3>
+        <p>
+          Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<section class="presentation_tc">
+  <div class="presentation_tc_content">
+    <div class="presentation_infos">
+      <img src="/assets/logo_prez.png"/>
+      <p>Toupine et Cabesselle et son chef Norbert Dusserre vous proposent de partager un instant culinaire de qualité grâce à son service traiteur et sa boutique en ligne de produits d’épicerie fine provençale. Toupine et Cabesselle, qui signifie en provençal marmite et couvercle, est née de l'association entre un père restaurateur durant plus de 20 ans et ses filles.</p>
+      <p>
+        Fort de  ses douze années passées en Principauté de Monaco dans de prestigieuses maisons, dont la dernière auprès d' Alain Ducasse, Norbert Dusserre a brillamment proposé de 1988 à 2012 sa cuisine gastronomique au sein de son établissement à Rognonas dont il est originaire.
+      </p>
+      <p>
+        Sa cuisine raffinée et son engagement qualitatif ont été récompensés par  le titre de « Maître Restaurateur » en 2009.
+      </p>
+      <p>
+        Chacun des produits Toupine et Cabesselle est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité. Cette exigence de qualité se traduit également par un contrôle sanitaire strict de tous les produits.
+      </p>
+      <div class="discover_services"><a href="#">Découvrez nos services</a></div>
+    </div>
+    <div class="presentation_pics">
+      <img src="/assets/pots.jpg">
+      <img src="/assets/chicken.jpg">
+    </div>
+  </div>
+</section>

@@ -1,0 +1,334 @@
+@-moz-document url-prefix(){
+
+    header .select_style_lang {
+        background: transparent url("/assets/arrowdown.gif") no-repeat scroll 90% 0px !important;
+    }
+
+}
+
+.tinynav { 
+	display: none; 
+	width:50%;
+	height: 40px;
+}
+
+@media screen and (max-width:1024px){
+	.mid_item {
+    	margin-bottom: 7.1% !important;
+    }
+    
+	#hero_two{
+		display:none;
+	}
+
+    .identity_content>.half{
+    	width:100% !important;
+    }
+
+    .line .half{
+    	/*width:50% !important;*/
+    }
+
+    .uu{
+    	text-align: center;
+    }
+
+    .u{
+    	width: auto !important;
+    }
+
+	/*.presentation_infos, .presentation_pics{
+		float: none !important;
+		width: 100% !important;
+	}
+
+	.presentation_pics{
+	    margin-top: 50px;
+	}
+
+	.presentation_infos p{
+		margin-right: 0 !important;
+	}*/
+
+	header ul li a{
+		font-size: 18px !important;
+	}
+
+	header .menu li a{
+		padding:0 13px !important;
+	}
+
+	.sml_logo{
+		height: 42px;
+    	background-color: #fff;
+    	padding-top: 8px;
+    	width: 100px;
+	}
+
+	.sml_logo img{
+		width: 100px;
+		margin-left: -13px;
+	}
+
+	.sml_logo a{
+		padding: 0 !important;
+	}
+}
+
+@media screen and (max-width:970px){
+	.reassurances_content article{
+		float: none !important;
+		width: 100% !important;
+		margin-bottom: 40px;
+	}
+
+	.reassurances_content article:last-child{
+		margin-bottom: 0;
+	}
+
+	.reassur_icon{
+		padding-top: 0 !important;
+	}
+
+	.categories_content{
+		padding-right: 20px;
+	}
+
+	.liste_content .item{
+		width: 32% !important;
+	}
+
+	.item:nth-child(4){
+		margin-right: 0;
+	}
+
+	.item:nth-child(5){
+		margin-right: 1.33% !important;
+	}
+
+	.categories, .liste, .produit, .recapitulatif_panier, .centre_page{
+		float:none !important;
+		width: 100% !important;
+	}
+
+	.categories{
+		margin-bottom: 20px !important;
+	}
+
+	.liste_content, .produit_content, .panier_content, .centre_page_content{
+		padding-left: 10px !important;
+	}
+
+	.logo_distributeurs img{
+		width:40%;
+	}
+
+	.logo_distributeurs{
+		margin-bottom: 20px !important;
+		margin-top: 50px !important;
+	}
+
+	footer .adresse{
+		float:none !important;
+		width: 100% !important;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	footer .boutique, footer .blog, footer .autre{
+		width:32%;
+	}
+
+/*------------------------------------------------------*/
+/*                    RESPONSIVE MENU                          */
+/*------------------------------------------------------*/
+
+	header{
+		width: 70% !important;
+		height: auto ! important;
+		bottom:0;
+		overflow: visible !important;
+		margin-left: -70%;
+	}
+
+	header .menu, header .commands, header ul li{
+		float:none !important;
+	}
+
+	header .commands li{
+		padding-left: 23px;
+	}
+
+	header .select_style_lang select{
+		padding:0 !important;
+	}
+
+	header .commands .cart{
+		margin-top: 10px !important;
+		padding: 20px 15px 0 30px !important;
+	}
+
+	.commands{
+		padding-top: 10px;
+	}
+
+	.toggle_container{
+		display: block !important;
+	}
+
+	.detail_produit, .page_panier, .page{
+		margin-top: 50px !important;
+	}
+
+	.reassur_icon span{
+		margin-left:20px;
+	}
+
+	.logo_headline, .hero{
+		margin-top: 40px !important;
+	}
+
+	/*.home_categories_content .item{
+		width: 48.5% !important;
+	}
+
+	.home_categories_content .item:nth-child(2){
+		margin-right: 0 !important;
+	}*/
+
+	.tinynav { display: block }
+    .taxons-list { display: none }
+
+}
+
+@media screen and (max-width:600px){
+	.presentation{
+		font-size:18px !important;
+	}
+
+	.presentation p {
+ 	   line-height: 23px !important;
+	}
+
+	.presentation h2, .hero_content h1{
+		font-size: 30px !important;
+	}
+
+	.item{
+		width: 49% !important;
+	}
+
+	.home_selection .item{
+		margin-bottom: 20px;
+	}
+
+	.selection_content .item:nth-child(3), .home_categories_content .item:nth-child(3){
+		clear:both;
+	}
+
+	.selection_content .item:nth-child(2), .home_categories_content .item:nth-child(2){
+		margin-right: 0 !important;
+	}
+
+	footer .adresse{
+		text-align: center;
+    	width: 100% !important;
+    	float: none !important;
+	}
+
+	footer .boutique{
+		clear: both !important;
+    	margin-top: 50px;
+    	width: 50% !important;
+	}
+
+	footer .blog{
+		margin-top: 50px;
+		width: 50% !important;
+	}
+
+	footer .autre{
+		clear: both !important;
+    	text-align: center;
+    	width: 100% !important;
+    	margin-top: 50px;
+	}
+
+	.link_to_selection{
+		display: inline-block;
+	}
+
+}
+
+@media screen and (max-width:500px){
+
+	.line .half{
+		width: 100%;
+		float:none;
+	}
+	
+	.line{
+		height: auto !important;
+	}
+
+	.presentation{
+		height: auto !important;
+		min-height: 100px !important;
+	}
+
+	.presentation_content{
+		height: auto !important;
+	}
+
+	.glace{
+		display:none;
+	}
+}
+
+@media screen and (max-width:400px){
+	.logo_headline img{
+		max-width: 70%;
+	}
+
+	.hero{
+		margin-top: 30px !important;
+	}
+
+	.hero_content{
+		padding-top: 200px !important;
+	}
+
+	.hero_content h1{
+		margin-bottom: 20px !important;
+	}
+
+	.hero_content a{
+		font-size:18px;
+		display: inline-block;
+		margin: 0 5px 10px;
+	}
+
+	.item{
+		width: 100% !important;
+		float:none !important;
+	}
+
+	.link_to_selection{
+		display: inline-block;
+		font-size: 17px !important;
+	}
+
+	footer .boutique, footer .blog{
+		width:100% !important;
+		float: none !important;
+	}
+
+	.presentation_pics img{
+		width: 48.5% !important;
+	}
+
+	.home_categories_content .item{
+		max-height: 0 !important;
+	}
+}
+

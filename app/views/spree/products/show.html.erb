@@ -1,0 +1,59 @@
+<section class="content_produit detail_produit">
+  <div class="categories">
+    <div class="categories_content">
+      <h2><a href="/boutique">Boutique</a></h2>
+      <%= render :partial => 'spree/shared/left_taxo' %>
+    </div>
+  </div>
+  <div class="produit">
+    <div class="produit_content">
+      <div class="produit_avant_croisee">
+        <div class="image_produit">
+          <%= render :partial => 'image' %>
+        </div>
+        <div class="description_produit">
+          <%= render :partial => 'properties' %>
+          <%= render :partial => 'promotions' %>
+          <h1><%= @product.name %></h1>
+          <div class="texte_description_produit">
+            <%= product_description(@product) rescue Spree.t(:product_has_no_description) %>
+          </div>
+          <div class="formulaire_panier" id="cart-form">
+              <%= render :partial => 'cart_form' %>
+          </div>
+          <div id="social_share_btn">
+            <h3>Partagez moi : </h3>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.protocol %><%= request.host_with_port %><%= request.path.gsub("//","/") %>" class="social_share facebook"><i class="fa fa-facebook"></i>Facebook</a>
+            <a href="https://twitter.com/share"
+                  data-lang="fr"
+                  data-url="<%= request.protocol %><%= request.host_with_port %><%= request.path.gsub("//","/") %>"
+                  data-text="<%= @product.name %>"
+                  class="social_share twitter">
+                  <i class="fa fa-twitter"></i>Twitter
+            </a>
+            <a href='http://pinterest.com/pin/create/bookmarklet/?media=<%= product_image(@product) %>&url=<%= request.protocol %><%= request.host_with_port %><%= request.path.gsub("//","/") %>&is_video=false&description=<%= @product.name %>' class="social_share pinterest"><i class="fa fa-pinterest-p"></i>Pint-it</a>
+          </div>
+        </div>
+      </div>
+      <div class="selection clear produit_selection">
+      
+        <h2><span>VOUS ALLEZ AUSSI AIMER</span></h2>
+        <div class="selection_precontent">
+          <div class="selection_content">
+            
+          </div>
+        </div>
+      </div>
+      <div class="selection produit_selection">
+      
+        <h2><span>TROUVER EN BOUTIQUE</span></h2>
+        <div class="selection_precontent">
+          <div class="selection_content">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

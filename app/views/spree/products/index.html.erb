@@ -1,0 +1,20 @@
+<section class="logo_headline logo_distributeurs">
+    <%= image_tag "logo.png" %>
+</section>
+
+<section class="content_produit">
+	<div class="categories">
+		<div class="categories_content">
+			<h2><a href="/boutique">Boutique</a></h2>
+			<%= render :partial => 'spree/shared/left_taxo' %>
+		</div>
+	</div>
+	<div class="liste">
+		<div class="liste_content">
+			<h2>Nos produits</h2>
+			<% cache(cache_key_for_products) do %>
+    			<%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+  			<% end %>
+  		</div>
+	</div>
+</section>
