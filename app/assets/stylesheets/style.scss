@@ -15,11 +15,11 @@ img{
 
 @font-face {
   font-family: 'Sugo_ExtraLight';
-  src: url('/assets/Sugo_ExtraLight.eot'); /* IE9 Compat Modes */
-  src: url('/assets/Sugo_ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/Sugo_ExtraLight.woff') format('woff'), /* Modern Browsers */
-       url('/assets/Sugo_ExtraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/Sugo_ExtraLight.svg#55811ee8a2662a0fd6a9f7f06e59c33a') format('svg'); /* Legacy iOS */
+  src: url(font-path('Sugo_ExtraLight.eot')); /* IE9 Compat Modes */
+  src: url(font-path('Sugo_ExtraLight.eot?#iefix')) format('embedded-opentype'), /* IE6-IE8 */
+       url(font-path('Sugo_ExtraLight.woff')) format('woff'), /* Modern Browsers */
+       url(font-path('Sugo_ExtraLight.ttf'))  format('truetype'), /* Safari, Android, iOS */
+       url(font-path('Sugo_ExtraLight.svg#55811ee8a2662a0fd6a9f7f06e59c33a')) format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  200;
@@ -27,11 +27,11 @@ img{
 
 @font-face {
   font-family: 'Sugo';
-  src: url('/assets/Sugo.eot'); /* IE9 Compat Modes */
-  src: url('/assets/Sugo.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/Sugo.woff') format('woff'), /* Modern Browsers */
-       url('/assets/Sugo.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/Sugo.svg#b21d7344982455882a8f0ab69cb41e22') format('svg'); /* Legacy iOS */
+  src: url(font-path('Sugo.eot')); /* IE9 Compat Modes */
+  src: url(font-path('Sugo.eot?#iefix')) format('embedded-opentype'), /* IE6-IE8 */
+       url(font-path('Sugo.woff')) format('woff'), /* Modern Browsers */
+       url(font-path('Sugo.ttf'))  format('truetype'), /* Safari, Android, iOS */
+       url(font-path('Sugo.svg#b21d7344982455882a8f0ab69cb41e22')) format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;
@@ -39,11 +39,11 @@ img{
 
 @font-face {
   font-family: 'itsadzoke';
-  src: url('/assets/itsadzoke-046.eot'); /* IE9 Compat Modes */
-  src: url('/assets/itsadzoke-046.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/assets/itsadzoke-046.woff') format('woff'), /* Modern Browsers */
-       url('/assets/itsadzoke-046.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/assets/itsadzoke-046.svg#840431dab616b630627bffafe55873b8') format('svg'); /* Legacy iOS */
+  src: url(font-path('/itsadzoke-046.eot')); /* IE9 Compat Modes */
+  src: url(font-path('/itsadzoke-046.eot?#iefix')) format('embedded-opentype'), /* IE6-IE8 */
+       url(font-path('/itsadzoke-046.woff')) format('woff'), /* Modern Browsers */
+       url(font-path('/itsadzoke-046.ttf'))  format('truetype'), /* Safari, Android, iOS */
+       url(font-path('/itsadzoke-046.svg#840431dab616b630627bffafe55873b8')) format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;
