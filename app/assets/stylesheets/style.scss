@@ -208,7 +208,7 @@ header .select_style_lang{
     margin: 0;
     width: 85px;
     overflow: hidden;
-    background: transparent url("/assets/arrowdown.gif") no-repeat 90% 136%;
+    background: transparent url(asset_path("arrowdown.gif")) no-repeat 90% 136%;
     color:#fff;
 }
 
@@ -506,7 +506,7 @@ header .select_style_lang select:focus {
 }
 
 .item_content .infos .infos_overlay a{
-    background:#594542 url(/assets/toupine_white.png) no-repeat 5px 4px;
+    background:#594542 url(asset_path('toupine_white.png')) no-repeat 5px 4px;
     color:#fff;
     font-family: "itsadzoke", serif;
     font-size: 16px;
@@ -623,7 +623,7 @@ header .select_style_lang select:focus {
 
 .reassurances{
     padding:30px 0 30px 10px;
-    background: url(/assets/back_cruche.png);
+    background: url(asset_path('back_cruche.png'));
     margin-bottom: 50px;
 }
 
