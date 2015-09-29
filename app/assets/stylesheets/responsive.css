@@ -199,6 +199,10 @@
 	.tinynav { display: block }
     .taxons-list { display: none }
 
+    .order_summary{
+    	width: 100% !important;
+	}
+
 }
 
 @media screen and (max-width:600px){

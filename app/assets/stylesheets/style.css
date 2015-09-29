@@ -929,7 +929,7 @@ footer .socials a{
 }
 
 .description_produit{
-    width:*;
+    
 }
 
 .texte_description_produit{
@@ -1317,7 +1317,7 @@ label[for=spree_user_remember_me]{
     background-color: #c42361
 }
 
-.checkout_btn, .continue{
+.checkout_btn, .continue, .user_edit .btn-primary{
     font-family: 'Sugo_ExtraLight', sans-serif;
     background-color: #c42361;
     color:#fff;
@@ -1333,7 +1333,7 @@ label[for=spree_user_remember_me]{
     transition: color 200ms ease-in, background-color 200ms ease-in;
 }
 
-.checkout_btn:hover{
+.checkout_btn:hover, .user_edit .btn-primary:hover{
     background-color: #fff;
     color:#c42361;
 }
@@ -1442,7 +1442,7 @@ label[for=spree_user_remember_me]{
     overflow: hidden;
 }
 
-#checkout .field label{
+#checkout .field label, .user_edit label{
     font-size: 20px; 
     color:#594542;
     display: block;
@@ -1455,7 +1455,7 @@ span.required{
     margin-left: -10px;
 }
 
-#checkout .field input, #checkout .field select{
+#checkout .field input, #checkout .field select, .user_edit input{
     border: 1px solid #c42361;
     color: #000;
     padding: 8px 10px;
@@ -1541,4 +1541,54 @@ label[for=order_email]{
     font-weight: normal;
     font-size: 20px;
     color: #594542;
+}
+
+/*------------------------------------------------------*/
+/*                    ACCOUNT                          */
+/*------------------------------------------------------*/
+
+
+.orders_summary h2{
+    color: #c42361;
+}
+
+.order_summary{
+    width: 80%;
+}
+
+.order_summary th{
+    text-align: left;
+    color: #594542;
+    font-weight: normal;
+    font-size: 25px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.order_summary tr td{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+
+.order-number a{
+    color:#c42361;
+}
+
+.categories_content .my_account{
+    color:#c42361;
+    font-size: 20px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.user_edit br{
+    display:none;
+}
+
+#password-credentials{
+    margin-top:20px;
+}
+
+.user_edit input{
+    background:transparent;
 }
