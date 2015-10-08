@@ -305,6 +305,10 @@ header .select_style_lang select:focus {
     margin-top:100px;
 }
 
+.logo_headline img{
+    height:110px;
+}
+
 .logo_distributeurs{
     margin-bottom: 50px;
 }
@@ -321,12 +325,12 @@ header .select_style_lang select:focus {
 }
 
 .hero_content h1{
-    text-transform: uppercase;
     text-shadow: 0 0 2px rgba(0,0,0,0.5);
-    font-size:35px;
+    font-size:45px;
     color:#fff;
     margin-bottom: 30px;
-    font-weight: normal;
+    font-family: 'Sugo_ExtraLight';
+    font-weight: bold;
 }
 
 .hero_content a{
@@ -667,7 +671,7 @@ header .select_style_lang select:focus {
 }
 
 .reassur_phone i{
-    padding:19px !important;
+    padding:16px !important;
 }
 
 .reassur_infos h3{

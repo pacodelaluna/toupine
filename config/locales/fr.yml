@@ -26,12 +26,12 @@ fr:
     cookies: Cookies
     agency: Réalisation/Design
     reassur:
-      title_1: Une Question?
-      text_1: Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
-      title_2: Une Question?
-      text_2: Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
-      title_3: Une Question?
-      text_3: Nous sommes à votre écoute à questions@toupine-cabesselle.com (réponse dans la journée en semaine) ou au 04 90 49 40 40
+      title_1: Paiement sécurisé
+      text_1: Vous pouvez payer par cartes bancaires ou via paypal grace à notre solution de paiement sécurisée
+      title_2: Fabrication artisanale
+      text_2: Tous nos produits sont fabriqué maison à partir de produits frais et de qualité
+      title_3: Livraison.
+      text_3: Expédition sous 48h et livraison offerte à partir de 50€ d'achat.
   pages:
     cgv: /pages/cgv
     ml: /pages/mentions-legales
@@ -41,7 +41,7 @@ fr:
     home: 
     cart: Votre pannier
   home:
-    hero_one: Des fruits et des légumes savoureux, gorgés de soleil.
+    hero_one: "- Invitation gustative en Provence -"
     hero_two: Découvrez nos produits
     presentation_title: Épicerie fine Provençale
     presentation_text: Toupine et Cabesselle vous propose  une sélection de produits gastronomiques. Chacun est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité.
