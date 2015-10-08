@@ -20,7 +20,7 @@ fr:
     delivery: Livraison
     paiement: Paiement sécurisé
     ml: Mentions Légales
-    find_a_dealer: Touver un revendeur
+    find_a_dealer: Trouver un revendeur
     account: Mon compte
     cgv: cgv
     cookies: Cookies
@@ -78,6 +78,71 @@ fr:
       message: Message
       sent: Envoyé le
       submit: Envoyer
+
+
+  activerecord:
+    models:
+      spree/blog_entry:
+        one: Articles
+        other: Articles
+    attributes:
+      spree/blog_entry:
+        title: Titre
+        body: Corps
+        summary: Résumé
+        permalink: Permalink
+        published_at: Date de publication
+        visible: Visible
+        author_id: Autheur
+        tag_list: Tags
+        category_list: Catégories
+      spree/user:
+        nickname: Surnom
+        website_url: Website URL
+        google_plus_url: Google Plus URL
+        bio_info: Biographical info
+  spree:
+    title: Titre
+    body: Corps
+    summary: Résumé
+    permalink: Permalink
+    published_at: Date de publication
+    visible: Visible
+    author_id: Autheurs
+    tag_list: Tags
+    category_list: Catégories
+    nickname: Nickname
+    website_url: Website URL
+    google_plus_url: Google Plus URL
+    bio_info: Biographical info
+    blog: "Blog"
+    blog_entries: "Blog Entries"
+    new_blog_entry: "New Blog Entry"
+    no_blog_entries: "No blog entries found."
+    blog_entry_featured_image: Featured image
+    posted_on: Posted on
+    posted_in: Posted in
+    tagged: Tagged
+    by: by
+    blog_read_more: Read more
+    blog_archive: Archive
+    blog_tag: Tag
+    blog_category: Category
+    blog_author: Author
+    admin:
+      view_in_store: Voir
+      tab:
+        blog_entries: Blog entries
+    blog:
+      ago: ago
+      categories: Categories
+      tags: Tag cloud
+      recent_entries: Recent entries
+      archive: Archive
+  time:
+    formats:
+      blog_date: "%e %b %Y"
+
 
 
   activerecord:
@@ -482,12 +547,12 @@ fr:
     adjustments: Adjustments
     admin:
       tab:
-        configuration: Configuration
+        configuration: Config
         option_types: Option Types
         orders: Orders
         overview: Overview
         products: Products
-        promotions: Promotions
+        promotions: Promos
         properties: Properties
         prototypes: Prototypes
         reports: Reports
@@ -624,8 +689,8 @@ fr:
     code: Code
     company: Company
     complete: complete
-    configuration: Configuration
-    configurations: Configurations
+    configuration: Config
+    configurations: Config
     confirm: Confirm
     confirm_delete: Confirm Deletion
     confirm_password: Confirmation
@@ -1176,7 +1241,7 @@ fr:
       taxon:
         description: Order includes products with specified taxon(s)
         name: Taxon(s)
-    promotions: Promotions
+    promotions: Promo
     promotion_uses: Promotion uses
     propagate_all_variants: Propagate all variants
     properties: Properties
