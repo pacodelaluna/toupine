@@ -1,8 +1,12 @@
+<% content_for :head do %>
+  <title>Toupine & Cabesselle - Votre commande <%= @order.number %></title>
+  <meta name="description"></meta>
+<% end %>
 
 <section class="page_panier">
   <div class="categories">
     <div class="categories_content">
-      <h2><a href="/boutique">Boutique</a></h2>
+      <h2><a href="/products"><%= t('menu.shop') %></a></h2>
       <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
       <%= render :partial => 'spree/shared/left_taxo' %>
       <%= link_to Spree.t(:my_account), "/account", :class => "my_account" %>
@@ -10,16 +14,16 @@
   </div>
   <div class="recapitulatif_panier">
     <div class="panier_content recap">
-      <h2>Votre commande <%= @order.number %> est validée</h2>
+      <h2><%= t('order.validation_message', order: @order.number) %></h2>
       <% if order_just_completed?(@order) %>
-      <h3>Merci de nous faire confiance, vous trouverez ci dessous les details de votre commande!</h3>
+      <h3><%= t('order.validation_sub_message') %></h3>
       <% end %>
 
       <div id="order">
         <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
 
         <p class="back_link">
-          <%= link_to "Retour à la boutique", products_path, :class => 'inline_link' %>
+          <%= link_to t('link.back_to_the_shop'), products_path, :class => 'inline_link' %>
         </p>
       </div>
     </div>

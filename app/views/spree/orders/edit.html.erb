@@ -1,8 +1,13 @@
+<% content_for :head do %>
+  <title>Toupine & Cabesselle - <%= t('titles.cart') %></title>
+  <meta name="description" content="">
+<% end %>
+
 <% @body_id = 'cart' %>
 <section class="page_panier">
   <div class="categories">
     <div class="categories_content">
-      <h2><a href="/boutique">Boutique</a></h2>
+      <h2><a href="/products"><%= t('menu.shop') %></a></h2>
       <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
       <%= render :partial => 'spree/shared/left_taxo' %>
     </div>

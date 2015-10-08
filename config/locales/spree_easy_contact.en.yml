@@ -1,0 +1,72 @@
+en:
+  back_to_contacts_list: Back to contacts list
+  new_topic: Add a topic un sujet
+  go_to_topics_list: Got to topic list
+  spree:
+    topics:
+      index:
+        title: Topics list
+    contacts:
+      notices:
+        success: your message was sent successfully !
+      index:
+        title: Contacts inquiries list
+      new:
+        contact: Contactez-us
+        name: Name
+        email: Email
+        topic: Subjet
+        order_number: Order number
+        message: Message
+        sent: Sent on
+        submit: Submit
+    contact_mailer:
+      notification:
+        inquiry_has_been_received: A message has been received
+      details:
+        from: From
+        inquiry_type: Inquiry type
+        message: Message
+        order_number: Order number
+      confirmation:
+        your_message_has_been_sent: Email sent successfully  !
+        thank_you: Thank you
+    admin:
+      contacts:
+        index:
+          name: Name
+          email: Email
+          topic: Subjet
+          order_number: Order number
+          message: Message
+          sent: Sent on
+        show:
+          name: Name
+          email: Email
+          topic: Subjet
+          order_number: Order number
+          message: Message
+          sent: Sent on
+      topics:
+        index:
+          title: Title
+          email: Email
+        new:
+          new_topic: Add a topic
+          title: Title
+          email: Email
+        show:
+          title: Title
+          email: Email
+  activerecord:
+    attributes:
+      spree/contact:
+        name: Name
+        email: Email
+        topic: Subjet
+        order_number: Order number
+        message: Message
+        sent: Sent on
+      spree/topic:
+        title: Title
+        email: Email

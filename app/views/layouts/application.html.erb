@@ -13,100 +13,174 @@
     odevie.org
     Web agency
     -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <%= yield :head %>
 
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
-  <link rel="icon" type="type/png" href="/assets/favico.png" />
+  <link rel="icon" type="type/png" href="<%= image_tag "favico.png" %>" />
 </head>
 <body>
-	<header>
-      <ul class="menu">
-        <li class="sml_logo"><a href="/"><%= image_tag "sml_logo.png" %></a></li>
-        <li><a href="/boutique">Boutique</a></li>
-        <li><a href="#">Présentation</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="/distributeurs">Distributeurs</a></li>
-        <li><a href="#">Contacts</a></li>
-      </ul>
-      <ul class="commands">
-        <li class="socials">
-          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-          <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-        </li>
-        <li class="btn">
-          <div class="select_style_lang">
-            <select>
-              <option>Français</option>
-              <option>English</option>
-            </select>
-          </div>
-        </li>
-        <li class="btn"><% if spree_current_user %>
-            <%= link_to 'Deconnexion', spree_logout_path, :method => :delete %>
-          <% else %>
-            <%= link_to 'Connexion', spree_login_path %> / <%= link_to 'Inscription', spree_signup_path %>
-          <% end %></li>  
-        <li class="cart"><a href="/boutique/cart"><i class="fa fa-shopping-cart"></i></a></li>
-      </ul>
-    </header>
-
-  	<%= yield %>
-
-  	<footer>
-      <section>
-        <%= image_tag "logo_white.png" %>
-        <p class="phone_number">04 90 99 93 93</p>
-        <p class="mail_address">contact@toupine-cabesselle.com</p>
-        <p class="address">
-          259 Chemin de FontGisclar<br>
-          13570 Barbentane
-        </p>
-      </section>
-      <section>
-        <h2>Boutique</h2>
-        <ul>
-          <li><a href="#">Nous contacter</a></li>
-          <li><a href="#">Qui sommes nous?</a></li>
-          <li><a href="#">Conditions générales de vente</a></li>
-          <li><a href="#">Livraison</a></li>
-          <li><a href="#">Paiement sécurisé</a></li>
-          <li><a href="#">Mentions Légales</a></li>
-          <li><a href="#">Touver un revendeur</a></li>
-          <li><a href="#">Mon compte</a></li>
+<div id="site_container">
+  	<header>
+        <ul class="menu">
+          <li class="sml_logo"><a href="/"><%= image_tag "sml_logo.png" %></a></li>
+          <li><a href="/products"><%= t('menu.shop') %></a></li>
+          <li><a href="<%= t('pages.presentation') %>"><%= t('menu.presentation') %></a></li>
+          <li><a href="/blog"><%= t('menu.blog') %></a></li>
+          <li><a href="/distributeurs"><%= t('menu.dealer') %></a></li>
+          <li><a href="/contact"><%= t('menu.contact') %></a></li>
         </ul>
-      </section>
-      <section>
-        <h2>Blog</h2>
-        <ul>
-          <li><a href="#">blabla</a></li>
-          <li><a href="#">blabla</a></li>
-          <li><a href="#">blabla</a></li>
-        </ul>
-      </section>
-      <section>
-        <h2>Mode de paiement</h2>
-        <p class="pay">
-          <i class="fa fa-cc-visa"></i>
-          <i class="fa fa-cc-mastercard"></i>
-          <i class="fa fa-cc-paypal"></i>
-          <i class="fa fa-money"></i>
-        </p>
-        <h2>Suivez nous!</h2>
-        <p class="socials">
-            <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></i></a>
-            <a href="#" class="twitter"><i class="fa fa-twitter"></i></i></a>
+        <ul class="commands">
+          <li class="socials">
+            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
             <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
-            <a href="#" class="pinterest"><i class="fa fa-google-plus-square"></i></a>
-        </p>    
-      </section>
-    </footer>
-    <div class="footer">
-        © Copyright Toupine &amp; Cabeselle 2015 - CGV - <a href="#">Mentions Légales</a> - Réalisation/Design <a href="http://www.odevie.org">Odevie</a>
-    </div>
+          </li>
+          <li class="btn">
+            <div class="select_style_lang">
+              <%= form_tag("/locales", method: "get", id: "select_lang_form") do |f| %>
+                <select id="select_lang" name="locale">
+                <%= options_for_select(get_lang, session[:locale]) %>
+                </select>
+              <% end %>
+            </div>
+          </li>
+          <li class="btn"><% if spree_current_user %>
+              <%= link_to t('menu.disconnect'), spree_logout_path, :method => :delete %>
+            <% else %>
+              <%= link_to t('menu.connect'), spree_login_path %> / <%= link_to t('menu.subscribe'), spree_signup_path %>
+            <% end %></li>  
+          <li class="cart"><a href="/cart"><i class="fa fa-shopping-cart"></i><span id="link-to-cart"></span></a></li>
+        </ul>
 
+        <div class="toggle_container" id="toggle_command"><div class="toggle"></div></div>
+      </header>
+
+    	<%= yield %>
+
+      <% if controller.controller_name != 'home' %>
+      <section class="reassurances spree_reassurances">
+        <div class="reassurances_content">
+          <article>
+            <div class="reassur_icon">
+              <span class="reassur_phone"><i class="fa fa-phone"></i></span>
+            </div>
+            <div class="reassur_infos">
+              <h3><%= t('footer.reassur.title_1') %></h3>
+              <p>
+                <%= t('footer.reassur.text_1') %>
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="reassur_icon">
+              <span><i class="fa fa-truck"></i></span>
+            </div>
+            <div class="reassur_infos">
+              <h3><%= t('footer.reassur.title_2') %></h3>
+              <p>
+                <%= t('footer.reassur.text_2') %>
+              </p>
+            </div>
+          </article>
+          <article>
+            <div class="reassur_icon">
+              <span><i class="fa fa-credit-card"></i></span>
+            </div>
+            <div class="reassur_infos">
+              <h3><%= t('footer.reassur.title_3') %></h3>
+              <p>
+                <%= t('footer.reassur.text_3') %>
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <% if controller.action_name != 'distributeurs' %>
+      <section class="trouver_revendeur">
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+          function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var mapOptions = {
+              center: new google.maps.LatLng(43.8909896, 4.7450029),
+              zoom: 12,
+              scrollwheel: false,
+              disableDefaultUI: true,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+
+            var infowindow = null;
+
+          }
+
+          google.maps.event.addDomListener(window, 'load', initialize);
+
+        </script>
+        <div id="map_canvas" style="width:100%;height:200px;"></div>
+        <h1><a href="/distributeurs"><span><%= t('home.find_a_shop') %></span></a></h1>
+      </section>
+      <% end %>
+      <% end %>
+    	<footer>
+        <section class="adresse">
+          <%= image_tag "logo_white.png" %>
+          <p class="phone_number">04 90 99 93 93</p>
+          <p class="mail_address">contact@toupine-cabesselle.com</p>
+          <p class="address">
+            259 Chemin de FontGisclar<br>
+            13570 Barbentane
+          </p>
+        </section>
+        <section class="boutique">
+          <h2><%= t('menu.shop') %></h2>
+          <ul>
+            <li><a href="/contact"><%= t('footer.contact') %></a></li>
+            <li><a href="<%= t('pages.presentation') %>"><%= t('footer.who') %></a></li>
+            <li><a href="#"><%= t('footer.cts') %></a></li>
+            <li><a href="#"><%= t('footer.delivery') %></a></li>
+            <li><a href="#"><%= t('footer.paiement') %></a></li>
+            <li><a href="<%= t('pages.cookies') %>"><%= t('footer.cookies') %></a></li>
+            <li><a href="/distributeurs"><%= t('footer.find_a_dealer') %></a></li>
+            <% if spree_current_user %>
+            <li><a href="/account"><%= t('footer.account') %></a></li>
+            <% end %>
+          </ul>
+        </section>
+        <section class="blog">
+          <h2><%= t('menu.blog') %></h2>
+          <ul>
+            <% @blog_entries.each do |blog_entry| %>
+            <li><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></li>
+            <% end %>
+          </ul>
+        </section>
+        <section class="autre">
+          <h2><%= t('menu.paiement_type') %></h2>
+          <p class="pay">
+            <i class="fa fa-cc-visa"></i>
+            <i class="fa fa-cc-mastercard"></i>
+            <i class="fa fa-cc-paypal"></i>
+            <i class="fa fa-money"></i>
+          </p>
+          <h2><%= t('menu.share') %></h2>
+          <p class="socials">
+              <a href="#" class="facebook"><i class="fa fa-facebook-official"></i></i></a>
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></i></a>
+              <a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+              <a href="#" class="pinterest"><i class="fa fa-google-plus-square"></i></a>
+          </p>    
+        </section>
+      </footer>
+      <div class="footer">
+          © Copyright Toupine &amp; Cabeselle 2015 - <a href="<%= t('pages.cgv') %>"><%= t('footer.cgv') %></a> - <a href="<%= t('pages.ml') %>"><%= t('footer.ml') %></a> - <%= t('footer.agency' ) %> <a href="http://www.odevie.org">Odevie</a>
+      </div>
+    </div>
   	
 
 </body>

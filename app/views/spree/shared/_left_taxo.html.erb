@@ -2,7 +2,7 @@
       
 <% @taxonomies.each do |taxonomy| %>
   <% cache [I18n.locale, taxonomy, max_level] do %>
-    <% if taxonomy.name == "categories" %>
+    <% if taxonomy.name == "categories_#{session[:locale]}" %>
       <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
     <% end %>
   <% end %>

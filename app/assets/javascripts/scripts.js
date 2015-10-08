@@ -40,18 +40,22 @@ $(document).ready(function() {
 
 	$('.taxons-list').tinyNav();
 
-	$(window).scroll(function(){
+	/*$(window).scroll(function(){
 		if ($(window).scrollTop() > 10){
 			$('.sml_logo').css('display', 'block');
 		}else{
 			$('.sml_logo').css('display', 'none');
 		}
-	});
+	});*/
 
 	$.ajax({
         url: Spree.pathFor("cart_link"),
         success: function(data) {
           $('#link-to-cart').html(data);
         }
+    });
+
+    $('#select_lang').change(function(){
+    	$('#select_lang_form').submit();
     });
 });

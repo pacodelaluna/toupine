@@ -38,9 +38,15 @@ gem 'spring',        group: :development
 
 gem 'mysql2', '0.3.18'
 
-gem 'spree', '2.4'
+gem 'spree'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'rails-i18n'
 gem 'capistrano', '~> 2.15'
+gem "spree_pages", :git => 'git://github.com/sebastyuiop/spree_pages.git'
+gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: '2-4-stable'
+gem 'spree_blogging_spree', github: 'gdsn13/spree-blogging-spree'
+gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: '2-4-stable'
+gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
+
 

@@ -17,3 +17,8 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::LegacyUser"
+
+SpreeEditor::Config.tap do |config|
+  config.current_editor = 'CKEditor'
+  config.ids = 'product_description page_body event_body blog_entry_body'
+end

@@ -1,0 +1,22 @@
+<%- @body_id = 'page-show' -%>
+<% content_for :head do %>
+  <title>Toupine & Cabesselle - <%= @page.title %></title>
+  <meta name="description" content="<%= @page.meta_description %>">
+<% end %>
+
+
+<section class="page">
+  <div class="categories">
+    <div class="categories_content">
+      <h2><a href="/products"><%= t('menu.shop') %></a></h2>
+      <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
+      <%= render :partial => 'spree/shared/left_taxo' %>
+    </div>
+  </div>
+  <div class="centre_page">
+    <div class="centre_page_content static_page_content">
+      <h2><%= @page.title %></h2>
+      <%=raw @page.body %>
+    </div>
+  </div>
+</section>

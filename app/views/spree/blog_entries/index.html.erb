@@ -1,0 +1,22 @@
+<% content_for :head do %>
+  <title>Toupine et Cabesselle - le Blog</title>
+  <meta name="description">
+<% end %>
+
+<section class="page">
+  <div class="categories">
+    <div class="categories_content">
+      <h2><a href="/blog">Blog</a></h2>
+      <%= render :partial => 'spree/blog_entries/blog_sidebar' %>
+    </div>
+  </div>
+  <div class="centre_page">
+    <div class="centre_page_content static_page_content">
+      <% @blog_entries.each do |blog_entry| %>
+        <h2><%= link_to blog_entry.title, blog_entry_permalink(blog_entry) %></h2>
+        <p><%== blog_entry.entry_summary %></p>
+        <span class="blog_read_more"><%= link_to Spree.t(:blog_read_more), blog_entry_permalink(blog_entry) %></span>
+      <% end %>
+    </div>
+  </div>
+</section>

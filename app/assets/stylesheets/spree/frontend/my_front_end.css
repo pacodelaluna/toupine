@@ -1,0 +1,7 @@
+#admin-menu li a{
+	padding: 25px 0px;
+}
+
+#page_title_field, #page_meta_keywords_field, #page_meta_description_field, #page_permalink_field, #page_published_field{
+	width: 100%;
+}

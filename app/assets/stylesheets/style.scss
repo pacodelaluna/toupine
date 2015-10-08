@@ -106,7 +106,6 @@ header ul li{
 }
 
 .sml_logo{
-    display: none;
     margin:0;
 }
 
@@ -753,13 +752,13 @@ footer section h2{
     padding-bottom: 5px;
 }
 
-footer section .phone_number{
+footer section .phone_number, .phone_number{
     margin-top: 30px;
     font-size: 25px;
     font-weight: bold;
 }
 
-footer section .mail_address{
+footer section .mail_address, .mail_address{
     margin: 5px 0 30px 0;
     font-size: 20px;
     font-weight: bold;
@@ -1437,12 +1436,12 @@ label[for=spree_user_remember_me]{
     display:none;
 }
 
-#checkout .field{
+#checkout .field, .contact_left p{
     margin-bottom:15px;
     overflow: hidden;
 }
 
-#checkout .field label, .user_edit label{
+#checkout .field label, .user_edit label, .contact_page label{
     font-size: 20px; 
     color:#594542;
     display: block;
@@ -1455,7 +1454,7 @@ span.required{
     margin-left: -10px;
 }
 
-#checkout .field input, #checkout .field select, .user_edit input{
+#checkout .field input, #checkout .field select, .user_edit input, .contact_page input, .contact_page textarea{
     border: 1px solid #c42361;
     color: #000;
     padding: 8px 10px;
@@ -1591,4 +1590,104 @@ label[for=order_email]{
 
 .user_edit input{
     background:transparent;
+}
+
+/*------------------------------------------------------*/
+/*                    STATIC PAGES                      */
+/*------------------------------------------------------*/
+
+.static_page_content p{
+    font-size: 20px;
+    line-height: 25px;
+    color: #594542;
+    margin-bottom: 15px;
+}
+
+.static_page_content img{
+    margin: 0 10px;
+}
+
+#blog_entry_sidebar h6{
+    color: #594542;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.static_page_content h2 a{
+    color:#c42361;
+    text-decoration: none;
+}
+
+#blog_entry_sidebar{
+    margin-bottom: 50px;
+}
+
+.blog_read_more{
+    padding-top: 10px;
+}
+
+.blog_read_more a{
+    color: #c42361;
+    font-size: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #c42361;
+}
+
+.distributeurs_list h2{
+    color: #594542;
+    font-size: 35px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #aca2a0;
+    margin: 0 10px;
+}
+
+.distributeurs_list ul {
+    list-style: none;
+    margin: 50px 0 50px 10px;
+}
+
+.distributeurs_list ul li{
+    font-size: 20px;
+    color: #594542;
+    margin-bottom: 10px;
+}
+
+.distributeurs_list ul li a{
+    color: #c42361;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact_page{
+    overflow: hidden;
+}
+
+.contact_page .checkout_btn{
+    color:#fff;
+    font-size:25px;
+}
+
+.contact_page .checkout_btn:hover{
+    color:#c42361;
+}
+
+.contact_left, .contact_right{
+    width:50%;
+    float:left;
+}
+
+.contact_right{
+    color: #594542; 
+}
+
+.contact_right .address{
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.contact_page textarea{
+    height:200px;
 }

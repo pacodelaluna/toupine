@@ -1,0 +1,54 @@
+<% @body_id = 'spree_easy_contact' %>
+<% content_for :head do %>
+  <title>Toupine & Cabesselle - </title>
+  <meta name="description" content="">
+<% end %>
+
+
+<section class="page">
+  <div class="categories">
+    <div class="categories_content">
+      <h2><a href="/products"><%= t('menu.shop') %></a></h2>
+      <% @taxonomies = Spree::Taxonomy.includes(root: :children) %>
+      <%= render :partial => 'spree/shared/left_taxo' %>
+    </div>
+  </div>
+  <div class="centre_page">
+    <div class="centre_page_content contact_page">
+      <h2><%= t('contact.new.contact') %></h2>
+      <div class="contact_left">
+        <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
+        <%= form_for(@contact, :url => "/contact", :html => {}) do |f| %>
+          <p>
+              <%= f.label :name, t('contact.new.name') %>
+              <%= f.text_field :name, class: 'required' %>
+            </p>
+          <p>
+            <%= f.label :email, t("contact.new.email") %>
+            <%= f.email_field :email, class: 'required email' %>
+          </p>
+          <p>
+            <%= f.label :order_number, t("contact.new.order_number") %>
+            <%= f.text_field :order_number %>
+          </p>
+          <p>
+            <%= f.label :message, t("contact.new.message") %>
+            <%= f.text_area :message, class: 'required' %>
+          </p>
+          <p>
+            <%= f.submit t('contact.new.submit'), :alt => t('submit'), :id => 'contact_us_contact_submit', :title => t('contact.new.submit'), :class => "checkout_btn" %>
+          </p>
+        <% end %>
+      </div>
+      <div class="contact_right">
+      <%= image_tag "logo_brown.png" %>
+        <p class="phone_number">04 90 99 93 93</p>
+        <p class="mail_address">contact@toupine-cabesselle.com</p>
+        <p class="address">
+          259 Chemin de FontGisclar<br>
+          13570 Barbentane
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

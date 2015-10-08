@@ -1,0 +1,390 @@
+<%- @body_id = 'page-show' -%>
+<% content_for :head do %>
+  <title>Toupine & Cabesselle - Nos lieux de vente</title>
+  <meta name="description" content="">
+<% end %>
+
+
+<section class="page">
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+	var markers = [];
+
+	function initialize() {
+		var mapCanvas = document.getElementById('map_canvas');
+		var mapOptions = {
+			center: new google.maps.LatLng(43.881387, 4.730487),
+			zoom: 9,
+			scrollwheel: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas, mapOptions);
+
+		var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+
+		var locations = [
+            ['Chez Florence', 40.714364, -74.005972, 'http://www.google.com/intl/en_us/mapfiles/ms/micons/green-dot.png']
+        ];
+
+
+
+		var marker_chez_marie = new google.maps.Marker({
+			position: new google.maps.LatLng(43.961576, 4.931229),
+			map: map
+		});
+
+		markers.push(marker_chez_marie);
+		var marker_chez_florence = new google.maps.Marker({
+			position: new google.maps.LatLng(43.897794, 4.803733),
+			map: map
+		});
+		markers.push(marker_chez_florence);
+		var marker_vallongue = new google.maps.Marker({
+			position: new google.maps.LatLng(43.753595, 4.922696),
+			map: map
+		});
+		markers.push(marker_chez_florence);
+		var marker_gendre_primeur = new google.maps.Marker({
+			position: new google.maps.LatLng(43.664902, 4.643155),
+			map: map
+		});
+		markers.push(marker_gendre_primeur);
+		var marker_cinq_sens = new google.maps.Marker({
+			position: new google.maps.LatLng(43.836152, 5.037988),
+			map: map
+		});
+		markers.push(marker_cinq_sens);
+		var marker_a_votre_service = new google.maps.Marker({
+			position: new google.maps.LatLng(43.836152, 5.037988),
+			map: map
+		});
+		markers.push(marker_a_votre_service);
+		var marker_jardin_marie = new google.maps.Marker({
+			position: new google.maps.LatLng(43.637076, 4.941445),
+			map: map
+		});
+		markers.push(marker_jardin_marie);
+		var marker_la_provencale = new google.maps.Marker({
+			position: new google.maps.LatLng(43.583337, 4.459583),
+			map: map
+		});
+		markers.push(marker_la_provencale);
+		var marker_jacqueme = new google.maps.Marker({
+			position: new google.maps.LatLng(43.528853, 5.448804),
+			map: map
+		});
+		markers.push(marker_jacqueme);
+		var marker_quatres_tours = new google.maps.Marker({
+			position: new google.maps.LatLng(43.590855, 5.478993),
+			map: map
+		});
+		markers.push(marker_quatres_tours);
+		var marker_issartel_dist = new google.maps.Marker({
+			position: new google.maps.LatLng(43.673514, 4.622210),
+			map: map
+		});
+		markers.push(marker_issartel_dist);
+		var marker_mas_barres = new google.maps.Marker({
+			position: new google.maps.LatLng(43.715457, 4.834521),
+			map: map
+		});
+		markers.push(marker_mas_barres);
+		var marker_cellier_castel = new google.maps.Marker({
+			position: new google.maps.LatLng(43.888989, 4.841673),
+			map: map
+		});
+		markers.push(marker_cellier_castel);
+		var marker_decauche = new google.maps.Marker({
+			position: new google.maps.LatLng(43.662678, 4.650165),
+			map: map
+		});
+		markers.push(marker_decauche);
+		var marker_genin = new google.maps.Marker({
+			position: new google.maps.LatLng(43.676921, 4.624216),
+			map: map
+		});
+		markers.push(marker_genin);
+		var marker_st = new google.maps.Marker({
+			position: new google.maps.LatLng(43.677719, 4.630070),
+			map: map
+		});
+		markers.push(marker_st);
+		var marker_vp = new google.maps.Marker({
+			position: new google.maps.LatLng(43.663349, 3.470277),
+			map: map
+		});
+		markers.push(marker_vp);
+		var marker_au_gres = new google.maps.Marker({
+			position: new google.maps.LatLng(43.780708, 4.723413),
+			map: map
+		});
+		markers.push(marker_au_gres);	
+		var infowindow = null;
+
+		google.maps.event.addListener(marker_au_gres, 'click', function() {
+			var content_au_gres = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Au gres des saisons</h1><div id="bodyContent"><p>Place jean Galeron - Saint-Étienne-du-Grès</p><p>04 90 96 43 54</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_au_gres
+		 	});
+    		infowindow.open(map,marker_au_gres);
+  		});
+
+		google.maps.event.addListener(marker_vp, 'click', function() {
+			var content_vp = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Vignerons et passions</h1><div id="bodyContent"><p>BP1 - St Felix de Lodez</p><p>04 67 88 45 75</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_vp
+		 	});
+    		infowindow.open(map,marker_vp);
+  		});
+
+		google.maps.event.addListener(marker_st, 'click', function() {
+			var content_st = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Saveurs et terroirs</h1><div id="bodyContent"><p>24 ter rond point des arènes - Arles</p><p>04 90 93 00 03</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_st
+		 	});
+    		infowindow.open(map,marker_st);
+  		});
+
+		google.maps.event.addListener(marker_genin, 'click', function() {
+			var content_genin = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Maison Genin</h1><div id="bodyContent"><p>11 Rue des Porcelets - Arles</p><p>04 90 96 01 12</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_genin
+		 	});
+    		infowindow.open(map,marker_genin);
+  		});
+
+		google.maps.event.addListener(marker_decauche, 'click', function() {
+			var content_decauche = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boucherie Brian Decauche</h1><div id="bodyContent"><p>Pont de crau - Arles</p><p>04 90 96 26 54</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_decauche
+		 	});
+    		infowindow.open(map,marker_decauche);
+  		});
+
+		google.maps.event.addListener(marker_cellier_castel, 'click', function() {
+			var content_cellier_castel = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Le cellier du castel</h1><div id="bodyContent"><p>Blvd Gambetta - Chateaurenard</p><p>04 90 94 71 09</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_cellier_castel
+		 	});
+    		infowindow.open(map,marker_cellier_castel);
+  		});
+
+		google.maps.event.addListener(marker_mas_barres, 'click', function() {
+			var content_mas_barres = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Mas des Barres</h1><div id="bodyContent"><p>Maussane les Alpilles</p><p>04 90 54 44 32</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_mas_barres
+		 	});
+    		infowindow.open(map,marker_mas_barres);
+  		});
+
+		google.maps.event.addListener(marker_issartel_dist, 'click', function() {
+			var content_issartel_dist = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Issartel Distribution</h1><div id="bodyContent"><p>26 ave Sixte Quentin - Arles</p><p>09 67 02 53 01</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_issartel_dist
+		 	});
+    		infowindow.open(map,marker_issartel_dist);
+  		});
+
+		google.maps.event.addListener(marker_quatres_tours, 'click', function() {
+			var content_quatres_tours = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Les quatres tours</h1><div id="bodyContent"><p>Cave de Venelles RN 96 - 56 ave de la grande Bégude - Venelles</p><p>04 42 54 94 23</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_quatres_tours
+		 	});
+    		infowindow.open(map,marker_quatres_tours);
+  		});
+
+		google.maps.event.addListener(marker_jacqueme, 'click', function() {
+			var content_jacqueme = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Jacquemes</h1><div id="bodyContent"><p>9 rue Méjanes - Aix en Provence</p><p>04 42 23 48 64</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_jacqueme
+		 	});
+    		infowindow.open(map,marker_jacqueme);
+  		});
+
+		google.maps.event.addListener(marker_la_provencale, 'click', function() {
+			var content_laprovencale = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">La provencale</h1><div id="bodyContent"><p>Mas Alivon, Le Paty de la Trinité - Albaron</p><p>06 15 10 26 01</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_laprovencale
+		 	});
+    		infowindow.open(map,marker_la_provencale);
+  		});
+
+		google.maps.event.addListener(marker_a_votre_service, 'click', function() {
+			var content_a_votre_service = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Le jardin de Marie</h1><div id="bodyContent"><p>RN 113 - Saint Martin de Crau</p><p>04 90 53 52 46</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_a_votre_service
+		 	});
+    		infowindow.open(map,marker_a_votre_service);
+  		});
+
+		google.maps.event.addListener(marker_a_votre_service, 'click', function() {
+			var content_a_votre_service = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">A Votre Service</h1><div id="bodyContent"><p>90 Av de la vallée des Baux, Maussane les Alpilles</p><p>04 90 54 44 76</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_a_votre_service
+		 	});
+    		infowindow.open(map,marker_a_votre_service);
+  		});
+
+		google.maps.event.addListener(marker_gendre_primeur, 'click', function() {
+			var content_gendre_primeur = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Les Cinq Sens</h1><div id="bodyContent"><p>81 rue Raspail - Cavaillon</p><p>04 32 50 28 55</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_gendre_primeur
+		 	});
+    		infowindow.open(map,marker_gendre_primeur);
+  		});
+
+		google.maps.event.addListener(marker_gendre_primeur, 'click', function() {
+			var content_gendre_primeur = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">GENDRE PRIMEUR</h1><div id="bodyContent"><p>Avenue des arches - Arles</p><p>06 11 37 86 79</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_gendre_primeur
+		 	});
+    		infowindow.open(map,marker_gendre_primeur);
+  		});
+
+		google.maps.event.addListener(marker_vallongue, 'click', function() {
+			var content_vallongue = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Domaine de la Vallongue</h1><div id="bodyContent"><p>Route de Mouries, D24 - EYGALIERES</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_vallongue
+		 	});
+    		infowindow.open(map,marker_vallongue);
+  		});
+
+		google.maps.event.addListener(marker_vallongue, 'click', function() {
+			var content_vallongue = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Domaine de la Vallongue</h1><div id="bodyContent"><p>Route de Mouries, D24 - EYGALIERES</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_vallongue
+		 	});
+    		infowindow.open(map,marker_vallongue);
+  		});
+
+		google.maps.event.addListener(marker_chez_marie, 'click', function() {
+			var content_chez_marie = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Chez Marie</h1><div id="bodyContent"><p>448 ave du Mistral, ST SATURNIN LES AVIGNONS</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_chez_marie
+		 	});
+    		infowindow.open(map,marker_chez_marie);
+  		});
+
+  		google.maps.event.addListener(marker_chez_florence, 'click', function() {
+			var content_chez_florence = '<div class="content"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Chez Florence</h1><div id="bodyContent"><p>1 place Charles Gontier, ROGNONAS</p><p>04 90 94 80 19</p></div></div>';
+	      	if (infowindow) {
+     		   infowindow.close();
+    		}
+			infowindow = new google.maps.InfoWindow({
+		      content: content_chez_florence
+		 	});
+    		infowindow.open(map,marker_chez_florence);
+  		});
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+	function myClick(id){
+        google.maps.event.trigger(markers[id], 'click');
+    }
+
+</script>
+
+
+		<div class="distributeurs_list">
+			<h2>Nos lieux de vente</h2>
+			<ul>
+				<li><a href="#map_canvas" onclick="myClick(0)">CHEZ MARIE</a>, 
+				448 ave du Mistral, ST SATURNIN LES AVIGNONS</li>
+				<li><a href="#map_canvas" onclick="myClick(1)">CHEZ FLORENCE</a>, 
+				1 place Charles Gontier,	ROGNONAS, 04 90 94 80 19</li>
+				<li><a href="#map_canvas" onclick="myClick(2)">DOMAINE DE LA VALLONGUE</a>,
+				 Route de Mouriès, D24, EYGALIERES</li>
+				<li><a href="#map_canvas" onclick="myClick(3)">GENDRE PRIMEUR</a>,
+				Avenue des arches, ARLES, 06 11 37 86 79</li>
+				<li><a href="#map_canvas" onclick="myClick(4)">LES CINQ SENS</a>,
+				81 rue Raspail, CAVAILLON,	04 32 50 28 55</li>
+				<li><a href="#map_canvas" onclick="myClick(5)">A VOTRE SERVICE</a>,
+				90, ave de la vallée des Baux, MAUSSANE LES ALPILLES, 04 90 54 44 76</li>
+				<li><a href="#map_canvas" onclick="myClick(6)">LE JARDIN DE MARIE</a>,
+				RN 113, SAINT MARTIN DE CRAU, 04 90 53 52 46</li>
+				<li><a href="#map_canvas" onclick="myClick(7)">LA PROVENCALE</a>,
+				Mas Alivon, Le Paty de la Trinité, ALBARON, 06 15 10 26 01</li>
+				<li><a href="#map_canvas" onclick="myClick(8)">JACQUEMES</a>,
+				9 rue Méjanes, AIX EN PROVENCE, 04 42 23 48 64</li>
+				<li><a href="#map_canvas" onclick="myClick(9)">LES QUATRES TOURS SCA</a>,
+				Cave de Venelles, RN 96, 56 ave de la grande Bégude, VENELLES, 04 42 54 94 23</li>
+				<li><a href="#map_canvas" onclick="myClick(10)">ISSARTEL DISTRIBUTION</a>,
+				26 ave Sixte Quentin, ARLES, 09 67 02 53 01</li>
+				<li><a href="#map_canvas" onclick="myClick(11)">MAS DES BARRES</a>,
+				MAUSSANE LES ALPILLES, 04 90 54 44 32</li>
+				<li><a href="#map_canvas" onclick="myClick(12)">LE CELLIER DU CASTEL</a>,
+				Bd Gambetta, CHATEAURENARD, 04 90 94 71 09</li>
+				<li><a href="#map_canvas" onclick="myClick(13)">BOUCHERIE BRIAN DECAUCHE</a>,
+				Pont de Crau, ARLES, 04 90 96 26 54</li>
+				<li><a href="#map_canvas" onclick="myClick(14)">MAISON GENIN</a>,
+				11, rue des Porcelets, ARLES, 04 90 96 01 12</li>
+				<li><a href="#map_canvas" onclick="myClick(15)">SAVEURS ET TERROIRS</a>,
+				24 ter rond point des Arènes,  ARLES, 04 90 93 00 03</li>
+				<li><a href="#map_canvas" onclick="myClick(16)">VIGNERONS ET PASSIONS</a>,
+				B.P. 1, ST FELIX DE LODEZ, 04 67 88 45 75</li>
+				<li><a href="#map_canvas" onclick="myClick(17)">AU GRES DES SAISONS</a>,
+				Place jean Galeron, ST ETIENNE DU GRES, 04 90 96 43 54</li>
+			</ul>
+		</div>
+
+
+<div id="map_canvas" style="width:100%;height:800px;"></div>
+
+</section>
