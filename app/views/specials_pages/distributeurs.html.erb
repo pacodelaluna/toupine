@@ -39,6 +39,8 @@
 	            ['Saveurs et terroirs', 43.677719, 4.630070, '<div class="content"><h1 id="firstHeading" class="firstHeading">Saveurs et terroirs</h1><div id="bodyContent"><p>24 ter rond point des arènes - Arles</p><p>04 90 93 00 03</p></div></div>', '24 ter rond point des Arènes, ARLES, 04 90 93 00 03'],
 	            ['Vignerons et passions', 43.663349, 3.470277, '<div class="content"><h1 id="firstHeading" class="firstHeading">Vignerons et passions</h1><div id="bodyContent"><p>BP1 - St Felix de Lodez</p><p>04 67 88 45 75</p></div></div>', 'B.P. 1, ST FELIX DE LODEZ, 04 67 88 45 75'],
 	            ['Au Gres des saisons',43.780708, 4.723413, '<div class="content"><h1 id="firstHeading" class="firstHeading">Au gres des saisons</h1><div id="bodyContent"><p>Place jean Galeron - Saint-Étienne-du-Grès</p><p>04 90 96 43 54</p></div></div>', 'Place jean Galeron, ST ETIENNE DU GRES, 04 90 96 43 54'],
+	            ['Le Jardin d\'Epicure',50.533573, 2.638710, '<div class="content"><h1 id="firstHeading" class="firstHeading">Le Jardin d\'Epicure</h1><div id="bodyContent"><p>206 rue Sadi Carnot, 62400 Béthune</p><p>03 21 57 91 04</p></div></div>', '206 rue Sadi Carnot, 62400 Béthune, 03 21 57 91 04'],
+	            ['Une Histoire de Goûts',50.533573, 2.638710, '<div class="content"><h1 id="firstHeading" class="firstHeading">Une Histoire de Goûts</h1><div id="bodyContent"><p> 54 rue de la Mairie, 59500 Douai</p><p>03 27 98 92 38</p></div></div>', ' 54 rue de la Mairie, 59500 Douai, 03 27 98 92 38'],
 	        ];
 
 		function initialize() {
@@ -66,8 +68,6 @@
 
 	            google.maps.event.addListener(marker, 'click', (function(marker, i) {
 	                return function() {
-	                	
-
 	                    infowindow.setContent(locations[i][3]);
 	                    infowindow.open(map, marker);
 	                }
@@ -90,7 +90,7 @@
 	    	var list = $('.distributeurs_list ul');
 
 	    	for (i = 0; i < locations.length; i++) {
-	    		list.append('<li><a href="#map_canvas" onclick="myClick(0)">' + locations[i][0] + '</a>, ' + locations[i][4] + '</li>')	
+	    		list.append('<li><a href="#map_canvas" onclick="myClick(' + i + ')">' + locations[i][0] + '</a>, ' + locations[i][4] + '</li>')	
 	    	}
 	    });
 

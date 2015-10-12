@@ -26,57 +26,57 @@ en:
     cookies: Cookies
     agency: Development/Design
     reassur:
-      title_1: Paiement sécurisé
-      text_1: Vous pouvez payer par cartes bancaires ou via paypal grace à notre solution de paiement sécurisée
-      title_2: Fabrication artisanale
-      text_2: Tous nos produits sont fabriqué maison à partir de produits frais et de qualité
-      title_3: Livraison.
-      text_3: Expédition sous 48h et livraison offerte à partir de 50€ d'achat.
+      title_1: Secure Paiements
+      text_1: You can order by credit cards with or secure payment solution or with paypal.
+      title_2: Handmade
+      text_2: All or products are handmade from fresh and quality products.
+      title_3: Delivery.
+      text_3: We send your order in 48h and it's free when your order is more than 50€.
   pages:
     cgv: /pages/gtc
     ml: /pages/legals-terms
     presentation: /pages/presentation_toupine_cabesselle_en
   titles:
     home: 
-    cart: Votre pannier
+    cart: Cart
   home:
     hero_one: "- Invitation gustative en Provence -"
-    hero_two: Découvrez nos produits
-    presentation_title: Épicerie fine Provençale
-    presentation_text: Toupine et Cabesselle vous propose  une sélection de produits gastronomiques. Chacun est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité.
-    selection_title: Sélection de produits de saison
-    selection_link: Voir la sélection complète
-    sweet_products: Produits sucrés
-    salted_products: Produits salés
-    new_products: Nouveautés
-    sales_products: Promotions
-    accessories_products: Accessoires
-    sweet_products_permalink: produits-sucres
-    salted_products_permalink: produits-sales
-    new_products_permalink: nouveautes
-    sales_products_permalink: promotions
-    accessories_products_permalink: accessoires
+    hero_two: Discover our products
+    presentation_title: Provençal delicatessen.
+    presentation_text: Toupine Cabesselle offer you a selection of gourmet delicatessen products. Each are cooked with taste and authenticity, to underline the quality or our raw marerial.
+    selection_title: selected seasonal products
+    selection_link: See complete selection
+    sweet_products: Sweet products
+    salted_products: Salted products
+    new_products: New Product
+    sales_products: Sales
+    accessories_products: Accessories
+    sweet_products_permalink: sweet-products
+    salted_products_permalink: salted-products
+    new_products_permalink: new-products
+    sales_products_permalink: sales
+    accessories_products_permalink: accessories
     presentation_big_text_html: <p>Toupine et Cabesselle et son chef Norbert Dusserre vous proposent de partager un instant culinaire de qualité grâce à son service traiteur et sa boutique en ligne de produits d’épicerie fine provençale. Toupine et Cabesselle, qui signifie en provençal marmite et couvercle, est née de l'association entre un père restaurateur durant plus de 20 ans et ses filles.</p>
                                 <p>Fort de  ses douze années passées en Principauté de Monaco dans de prestigieuses maisons, dont la dernière auprès d' Alain Ducasse, Norbert Dusserre a brillamment proposé de 1988 à 2012 sa cuisine gastronomique au sein de son établissement à Rognonas dont il est originaire.</p>
                                 <p>Sa cuisine raffinée et son engagement qualitatif ont été récompensés par  le titre de « Maître Restaurateur » en 2009.</p>
                                 <p>Chacun des produits Toupine et Cabesselle est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité. Cette exigence de qualité se traduit également par un contrôle sanitaire strict de tous les produits.</p>
-    discover: Découvrez nos services
-    find_a_shop: Trouver une boutique
+    discover: Discover our service
+    find_a_shop: Find a shop
   order:
-    validation_message: Votre commande %{order} est validée
-    validation_sub_message: Merci de nous faire confiance, vous trouverez ci dessous les details de votre commande!
+    validation_message: Your order %{order} is validated
+    validation_sub_message: Thanks to trust us, you will find below your order details!
   link:
-    back_to_the_shop: Retour à la boutique
+    back_to_the_shop: Back to the shop
   contact:
     new:
-      contact: Contactez-nous
-      name: "Nom & prénom"
-      email: Courriel
-      topic: Sujet
-      order_number: Numéro de commande
+      contact: Contact us
+      name: "name"
+      email: email
+      topic: Subjet
+      order_number: Order number
       message: Message
-      sent: Envoyé le
-      submit: Envoyer
+      sent: Sent on
+      submit: Send
 
 
   activerecord:
