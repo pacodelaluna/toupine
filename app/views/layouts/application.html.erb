@@ -67,7 +67,7 @@
         <div class="reassurances_content">
           <article>
             <div class="reassur_icon">
-              <span class="reassur_phone"><i class="fa fa-phone"></i></span>
+              <span class="reassur_phone"><i class="fa fa-credit-card"></i></span>
             </div>
             <div class="reassur_infos">
               <h3><%= t('footer.reassur.title_1') %></h3>
@@ -78,7 +78,7 @@
           </article>
           <article>
             <div class="reassur_icon">
-              <span><i class="fa fa-truck"></i></span>
+              <span><i class="fa fa-thumbs-up"></i></span>
             </div>
             <div class="reassur_infos">
               <h3><%= t('footer.reassur.title_2') %></h3>
@@ -89,7 +89,7 @@
           </article>
           <article>
             <div class="reassur_icon">
-              <span><i class="fa fa-credit-card"></i></span>
+              <span><i class="fa fa-truck"></i></span>
             </div>
             <div class="reassur_infos">
               <h3><%= t('footer.reassur.title_3') %></h3>
@@ -142,9 +142,8 @@
           <ul>
             <li><a href="/contact"><%= t('footer.contact') %></a></li>
             <li><a href="<%= t('pages.presentation') %>"><%= t('footer.who') %></a></li>
-            <li><a href="#"><%= t('footer.cts') %></a></li>
-            <li><a href="#"><%= t('footer.delivery') %></a></li>
-            <li><a href="#"><%= t('footer.paiement') %></a></li>
+            <li><a href="<%= t('pages.cgv') %>"><%= t('footer.cts') %></a></li>
+            <li><a href="<%= t('pages.delivery') %>"><%= t('footer.delivery') %></a></li>
             <li><a href="<%= t('pages.cookies') %>"><%= t('footer.cookies') %></a></li>
             <li><a href="/distributeurs"><%= t('footer.find_a_dealer') %></a></li>
             <% if spree_current_user %>
