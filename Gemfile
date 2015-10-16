@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.1.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,7 +38,7 @@ gem 'spring',        group: :development
 
 gem 'mysql2', '0.3.18'
 
-gem 'spree'
+gem 'spree', '~> 2.4.10'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '2-4-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '2-4-stable'
 gem 'rails-i18n'
@@ -46,7 +46,6 @@ gem 'capistrano', '~> 2.15'
 gem "spree_pages", :git => 'git://github.com/sebastyuiop/spree_pages.git'
 gem 'spree_editor', github: 'spree-contrib/spree_editor', branch: '2-4-stable'
 gem 'spree_blogging_spree', github: 'gdsn13/spree-blogging-spree'
-gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: '2-4-stable'
-gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
-
-
+#gem 'spree_product_assembly', github: 'spree-contrib/spree-product-assembly', branch: '2-4-stable'
+#gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
+gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
