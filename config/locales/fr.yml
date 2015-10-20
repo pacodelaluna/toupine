@@ -3,19 +3,19 @@ fr:
   fr: Français
   submit: Envoyer
   menu:
-    shop: boutique
+    shop: Boutique
     presentation: Présentation
     blog: Blog
-    dealer: Distributeurs
+    dealer: Revendeurs
     contact: Contact
-    disconnect: Deconnexion
+    disconnect: Déconnexion
     connect: Connexion
     subscribe: Inscription
-    share: Partagez!
-    paiement_type: Mode de paiement
+    share: Partagez !
+    paiement_type: Modes de paiement
   footer:
     contact: Nous contacter
-    who: Qui sommes nous?
+    who: Qui sommes-nous ?
     cts: Conditions générales de vente
     delivery: Livraison
     paiement: Paiement sécurisé
@@ -27,10 +27,10 @@ fr:
     agency: Réalisation/Design
     reassur:
       title_1: Paiement sécurisé
-      text_1: Vous pouvez payer par cartes bancaires ou via paypal grace à notre solution de paiement sécurisée
+      text_1: Vous pouvez payer par cartes bancaires ou via Paypal grâce à notre solution de paiement sécurisée
       title_2: Fabrication artisanale
-      text_2: Tous nos produits sont fabriqué maison à partir de produits frais et de qualité
-      title_3: Livraison.
+      text_2: Tous nos produits sont fabriqués maison à partir de matières premières fraîches et de qualité
+      title_3: Livraison offerte à partir de 50€
       text_3: Expédition sous 48h et livraison offerte à partir de 50€ d'achat.
   pages:
     cgv: /pages/cgv
@@ -39,18 +39,19 @@ fr:
     cookies: /pages/cookies
   titles:
     home: 
-    cart: Votre pannier
+    cart: Votre panier
+    dealers: Où trouver nos produits ?
   home:
-    hero_one: "- Invitation gustative en Provence -"
+    hero_one: "Fabrication 100% artisanale"
     hero_two: Découvrez nos produits
     presentation_title: Épicerie fine Provençale
-    presentation_text: Toupine et Cabesselle vous propose  une sélection de produits gastronomiques. Chacun est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité.
+    presentation_text: Toupine et Cabesselle vous présente sa gamme de produits, cuisinés avec goût et authenticité, afin de mettre en valeur des matières premières de qualité.
     selection_title: Sélection de produits de saison
     selection_link: Voir la sélection complète
     sweet_products: Produits sucrés
     salted_products: Produits salés
     new_products: Nouveautés
-    sales_products: Promotions
+    sales_products: Coffrets
     accessories_products: Accessoires
     sweet_products_permalink: produits-sucres
     salted_products_permalink: produits-sales
@@ -62,7 +63,7 @@ fr:
                                 <p>Sa cuisine raffinée et son engagement qualitatif ont été récompensés par  le titre de « Maître Restaurateur » en 2009.</p>
                                 <p>Chacun des produits Toupine et Cabesselle est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité. Cette exigence de qualité se traduit également par un contrôle sanitaire strict de tous les produits.</p>
     discover: Découvrez nos services
-    find_a_shop: Trouver une boutique
+    find_a_shop: Trouver un revendeur
   order:
     validation_message: Votre commande %{order} est validée
     validation_sub_message: Merci de nous faire confiance, vous trouverez ci dessous les details de votre commande!
@@ -660,7 +661,7 @@ fr:
     card_number: Card Number
     card_type: Brand
     card_type_is: Card type is
-    cart: Panier
+    cart: "Panier "
     cart_subtotal:
       one: 'Subtotal (1 item)'
       other: 'Subtotal (%{count} items)'
