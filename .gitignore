@@ -29,7 +29,8 @@ pickle-email-*.html
 /config/application.rb
 /vendor
 /Gemfile.lock
-
+/public
+#/db
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 #config/initializers/secret_token.rb
