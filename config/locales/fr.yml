@@ -37,6 +37,7 @@ fr:
     ml: /pages/mentions_legales
     presentation: /pages/presentation_toupine_cabesselle 
     cookies: /pages/cookies
+    delivery: /pages/livraison
   titles:
     home: 
     cart: Votre panier
@@ -58,10 +59,7 @@ fr:
     new_products_permalink: nouveautes
     sales_products_permalink: promotions
     accessories_products_permalink: accessoires
-    presentation_big_text_html: <p>Toupine et Cabesselle et son chef Norbert Dusserre vous proposent de partager un instant culinaire de qualité grâce à son service traiteur et sa boutique en ligne de produits d’épicerie fine provençale. Toupine et Cabesselle, qui signifie en provençal marmite et couvercle, est née de l'association entre un père restaurateur durant plus de 20 ans et ses filles.</p>
-                                <p>Fort de  ses douze années passées en Principauté de Monaco dans de prestigieuses maisons, dont la dernière auprès d' Alain Ducasse, Norbert Dusserre a brillamment proposé de 1988 à 2012 sa cuisine gastronomique au sein de son établissement à Rognonas dont il est originaire.</p>
-                                <p>Sa cuisine raffinée et son engagement qualitatif ont été récompensés par  le titre de « Maître Restaurateur » en 2009.</p>
-                                <p>Chacun des produits Toupine et Cabesselle est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité. Cette exigence de qualité se traduit également par un contrôle sanitaire strict de tous les produits.</p>
+    presentation_big_text_html: "<p>Une entreprise familiale et artisanale. Toupine et Cabesselle, qui signifie en provençal marmite et couvercle, est née de l'association entre un père restaurateur durant plus de 20 ans, Norbert Dusserre, et sa fille.</p><p>Fort de ses douze années passées en Principauté de Monaco dans de prestigieuses maisons, dont la dernière auprès d'Alain Ducasse, Norbert Dusserre a brillamment proposé de 1988 à 2012 sa cuisine gastronomique au sein de son établissement à Rognonas dans les Boûches-du-Rhône dont il est originaire. Sa cuisine raffinée et son engagement qualitatif ont été récompensés par  le titre de « Maître Restaurateur » en 2009.</p><p>En 2011 est née l’idée de partager cet amour de la gastronomie provençale et de créer une gamme de produits d’épicerie fine faisant la part belle à ce que la Provence a de meilleur : des fruits et des légumes savoureux, gorgés de soleil.</p><p>Chacun des produits Toupine et Cabesselle est cuisiné de façon artisanale, avec goût et authenticité, afin de mettre en valeur des matières premières de qualité. Une collaboration étroite avec les agriculteurs de la région symbolise notre souhait de sublimer notre terroir qui nous est cher.</p><p>Cette exigence de qualité se traduit également par un contrôle sanitaire strict de tous les produits, en partenariat avec le CTCPA d’Avignon, avec qui nous élaborons nos barèmes à appliquer pour une conservation optimale de nos produits sans porter préjudice à la qualité gustative.</p>"
     discover: Découvrez nos services
     find_a_shop: Trouver un revendeur
   order:

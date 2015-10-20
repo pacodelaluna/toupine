@@ -15,7 +15,7 @@
       <%= render :partial => 'spree/shared/left_taxo' %>
     </div>
   </div>
-  <div class="liste">
+  <div class="liste_content">
     <h2><%= @taxon.name %></h2>
     <div class="liste_content">
        <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>

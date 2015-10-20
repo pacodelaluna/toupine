@@ -1,7 +1,7 @@
 @-moz-document url-prefix(){
 
     header .select_style_lang {
-        background: transparent url("/assets/arrowdown.gif") no-repeat scroll 90% 0px !important;
+        background: transparent url(asset_path("arrowdown.gif")) no-repeat scroll 90% 0px !important;
     }
 
 }
