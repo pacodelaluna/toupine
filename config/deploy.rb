@@ -71,19 +71,15 @@ namespace :deploy do
     #run "sudo /etc/init.d/passenger restart coquins"
   end
 	# Defining the tasks to do after the deploy one
-  after "deploy", "deploy:symlink_shared", "deploy:rmv_trust", "deploy:restart", "deploy:cleanup"
+  after "deploy", "deploy:symlink_shared", "deploy:restart", "deploy:cleanup"
 
   [:start, :stop].each do |t|
     desc "#{t.to_s.capitalize} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
   end
-
-  task :rmv_trust do
-    run "rvm rvmrc trust #{release_path}"
-  end
   
   #set :config_files, 'config/database.yml,config/customs/action_mailer.yml,config/customs/sa_config.yml,config/customs/google_analytics.yml'
-  
+ 
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -s #{shared_path}/public #{release_path}/public"
