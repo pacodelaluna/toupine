@@ -107,15 +107,15 @@ fr:
   activerecord:
     attributes:
       spree/address:
-        address1: Address
-        address2: Address (contd.)
-        city: City
-        country: Country
-        firstname: First Name
-        lastname: Last Name
-        phone: Phone
+        address1: Adresse
+        address2: Complément adresse
+        city: Ville
+        country: Pays
+        firstname: Prénom
+        lastname: Nom
+        phone: Téléphone
         state: State
-        zipcode: Zip Code
+        zipcode: Code postal
       spree/calculator/tiered_flat_rate:
         preferred_base_amount: Base Amount
         preferred_tiers: Tiers
@@ -149,7 +149,7 @@ fr:
         completed_at: Completed At
         coupon_code: Entrez un code de réduction
         created_at: Order Date
-        email: Customer E-Mail
+        email: email
         ip_address: IP Address
         item_total: Item Total
         number: Number
@@ -254,7 +254,7 @@ fr:
         one: Address
         other: Addresses
       spree/country:
-        one: Country
+        one: Pays
         other: Countries
       spree/credit_card:
         one: Credit Card
@@ -528,7 +528,7 @@ fr:
     add_state: Add State
     add_stock: Add Stock
     add_stock_management: Add Stock Management
-    add_to_cart: Add To Cart
+    add_to_cart: Ajouter au panier
     add_variant: Add Variant
     additional_item: Additional Item
     address1: Address
@@ -640,7 +640,7 @@ fr:
     base_percent: Base Percent
     bill_address: Bill Address
     billing: Billing
-    billing_address: Billing Address
+    billing_address: Adresse de facturation
     both: Both
     calculated_reimbursements: Calculated Reimbursements
     calculator: Calculator
@@ -655,25 +655,25 @@ fr:
     cannot_set_shipping_method_without_address: Cannot set shipping method until customer details are provided.
     capture: Capture
     capture_events: Capture events
-    card_code: Card Code
-    card_number: Card Number
+    card_code: Code de validation
+    card_number: Numero de carte
     card_type: Brand
     card_type_is: Card type is
     cart: "Panier "
     cart_subtotal:
-      one: 'Subtotal (1 item)'
-      other: 'Subtotal (%{count} items)'
+      one: 'Total produit (1 produit)'
+      other: 'Total produits (%{count} produits)'
     categories: Categories
     category: Category
     charged: Charged
     check_for_spree_alerts: Check for Spree alerts
-    checkout: Valider
+    checkout: Finaliser ma commande
     choose_a_customer: Choose a customer
     choose_a_taxon_to_sort_products_for: "Choose a taxon to sort products for"
     choose_currency: Choose Currency
     choose_dashboard_locale: Choose Dashboard Locale
     choose_location: Choose location
-    city: City
+    city: Ville
     clear_cache: Clear Cache
     clear_cache_ok: Cache was flushed
     clear_cache_warning: Clearing cache will temporarily reduce the performance of your store.
@@ -698,7 +698,7 @@ fr:
     could_not_create_stock_movement: There was a problem saving this stock movement. Please try again.
     count_on_hand: Count On Hand
     countries: Countries
-    country: Country
+    country: Pays
     country_based: Country Based
     country_name: Name
     country_names:
@@ -764,7 +764,7 @@ fr:
     default_tax_zone: Default Tax Zone
     delete: Delete
     deleted_variants_present: Some line items in this order have products that are no longer available.
-    delivery: Delivery
+    delivery: Livraison
     depth: Depth
     description: Description
     destination: Destination
@@ -847,7 +847,8 @@ fr:
     exchange_for: Exchange for
     expedited_exchanges_warning: "Any specified exchanges will ship to the customer immediately upon saving. The customer will be charged the full amount of the item if they do not return the original item within %{days_window} days."
     excl: excl.
-    expiration: Expiration
+    expiration: Date d'expiration
+    expiration_placeholder : MM/AA
     extension: Extension
     existing_shipments: Existing shipments
     failed_payment_attempts: Failed Payment Attempts
@@ -858,13 +859,13 @@ fr:
     find_a_taxon: Find a Taxon
     finalized: Finalized
     first_item: First Item
-    first_name: First Name
+    first_name: Prénom
     first_name_begins_with: First Name Begins With
     flat_percent: Flat Percent
     flat_rate_per_order: Flat Rate
     flexible_rate: Flexible Rate
     forgot_password: Mot de passe oublié?
-    free_shipping: Free Shipping
+    free_shipping: livraison offerte
     free_shipping_amount: "-"
     front_end: Front End
     gateway: Gateway
@@ -939,7 +940,7 @@ fr:
     jirafe: Jirafe
     landing_page_rule:
       path: Path
-    last_name: Last Name
+    last_name: Nom
     last_name_begins_with: Last Name Begins With
     learn_more: Learn More
     lifetime_stats: Lifetime Stats
@@ -989,7 +990,7 @@ fr:
     my_account: My Account
     my_orders: My Orders
     name: Name
-    name_on_card: Name on card
+    name_on_card: Nom du porteur
     name_or_sku: Name or SKU (enter at least first 4 characters of product name)
     new: New
     new_adjustment: New Adjustment
@@ -1104,17 +1105,17 @@ fr:
     order_processed_successfully: Your order has been processed successfully
     order_resumed: Order resumed
     order_state:
-      address: address
-      awaiting_return: awaiting return
-      canceled: canceled
-      cart: cart
-      considered_risky: considered risky
-      complete: complete
-      confirm: confirm
-      delivery: delivery
-      payment: payment
-      resumed: resumed
-      returned: returned
+      address: adresse
+      awaiting_return: retour attendu
+      canceled: annulé
+      cart: Panier
+      considered_risky: Considéré riquée
+      complete: terminée
+      confirm: confirmée
+      delivery: livraison
+      payment: paiement
+      resumed: reprise
+      returned: retournée
     order_summary: Order Summary
     order_sure_want_to: Are you sure you want to %{event} this order?
     order_total: Order Total
@@ -1135,7 +1136,7 @@ fr:
     payment: Payment
     payment_could_not_be_created: Payment could not be created.
     payment_identifier: Payment Identifier
-    payment_information: Payment Information
+    payment_information: Choississez un moyen de paiement
     payment_method: Payment Method
     payment_methods: Payment Methods
     payment_method_not_supported: That payment method is unsupported. Please choose another one.
@@ -1159,7 +1160,7 @@ fr:
     percent_per_item: Percent Per Item
     permalink: Permalink
     pending: Pending
-    phone: Phone
+    phone: Téléphone
     place_order: Place Order
     please_define_payment_methods: Please define some payment methods first.
     populate_get_error: Something went wrong. Please try adding the item again.
@@ -1321,8 +1322,8 @@ fr:
     sales_total: Sales Total
     sales_total_description: Sales Total For All Orders
     sales_totals: Sales Totals
-    save_and_continue: Save and Continue
-    save_my_address: Save my address
+    save_and_continue: Sauvegarder et continuer
+    save_my_address: Sauvegarder mon adresse
     say_no: 'No'
     say_yes: 'Yes'
     scope: Scope
@@ -1368,15 +1369,15 @@ fr:
     shipment_transfer_error: 'There was an error transferring variants'
     shipments: Shipments
     shipped: Shipped
-    shipping: Shipping
-    shipping_address: Shipping Address
+    shipping: "Livraison "
+    shipping_address: Adresse d'expédition
     shipping_categories: Shipping Categories
     shipping_category: Shipping Category
     shipping_flat_rate_per_item: Flat rate per package item
     shipping_flat_rate_per_order: Flat rate
     shipping_flexible_rate: Flexible Rate per package item
     shipping_instructions: Shipping Instructions
-    shipping_method: Shipping Method
+    shipping_method: Mode de livraison 
     shipping_methods: Shipping Methods
     shipping_price_sack: Price sack
     shipping_total: Shipping total
@@ -1416,8 +1417,8 @@ fr:
     stock_transfers: Stock Transfers
     stop: Stop
     store: Store
-    street_address: Street Address
-    street_address_2: Street Address (cont'd)
+    street_address: Adresse
+    street_address_2: Complément adresse
     subtotal: Subtotal
     subtract: Subtract
     success: Success
@@ -1491,7 +1492,7 @@ fr:
     updating: Updating
     usage_limit: Usage Limit
     use_app_default: Use App Default
-    use_billing_address: Use Billing Address
+    use_billing_address: "Utiliser l'adresse de facturation"
     use_existing_cc: Use an existing card on file
     use_new_cc: Use a new card
     use_new_cc_or_payment_method: Use a new card / payment method
@@ -1515,14 +1516,14 @@ fr:
     version: Version
     void: Void
     weight: Weight
-    what_is_a_cvv: What is a (CVV) Credit Card Code?
-    what_is_this: What's This?
+    what_is_a_cvv: qu'est ce qu'un cryptogramme visuel?
+    what_is_this: De quoi il s'agit?
     width: Width
     year: Year
     you_have_no_orders_yet: You have no orders yet
     your_cart_is_empty: Votre Panier est vide
     your_order_is_empty_add_product: Your order is empty, please search for and add a product above
-    zip: Zip
-    zipcode: Zip Code
+    zip: Code postal
+    zipcode: Code postal
     zone: Zone
     zones: Zones

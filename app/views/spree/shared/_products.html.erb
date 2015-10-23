@@ -23,7 +23,17 @@
             <% end %>
           <% end %>
           <div class="infos">
-            <div class="infos_overlay"><a href="#">Ajouter au panier</a></div>
+            <div class="infos_overlay">
+              <% if controller.controller_name == 'home' %>
+              <%= form_for :order, :url => populate_orders_path do |f| %>
+                  <%= hidden_field_tag "variant_id", product.master.id %>
+                  <%= hidden_field_tag :quantity, 1 %>
+                  <%= button_tag :class => 'boutton_ajouter', :id => 'add-to-cart-button', :type => :submit do %>
+                    <%= Spree.t(:add_to_cart) %>
+                  <% end %>
+              <% end %>
+              <% end %>
+            </div>
             <div class="infos_left">
               <p><%= link_to product.name, url %></p>
               <p class="poids"><%= product.weight.to_i %> g</p>

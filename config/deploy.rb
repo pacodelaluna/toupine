@@ -5,6 +5,9 @@
 # Capistrano tasks simplifying the Blank-based application deployment
 # ThinkDry Technologies - 2010
 
+#require "rvm/capistrano"
+#require "bundler/capistrano"
+
 ##############################
 set :application, 'toupine'
 ##############################
@@ -83,17 +86,15 @@ namespace :deploy do
   
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "ln -nfs #{shared_path}/public/ #{release_path}/public/"
+    run "ln -s #{shared_path}/public #{release_path}/public"
     run "ln -nfs #{shared_path}/config/production.rb #{release_path}/config/production.rb"
     run "ln -nfs #{shared_path}/config/application.rb #{release_path}/config/application.rb"
-    #run "ln -nfs #{shared_path}/.rvmrc #{release_path}/.rvmrc"
     run "ln -nfs #{shared_path}/.ruby-gemset #{release_path}/.ruby-gemset"
     run "ln -nfs #{shared_path}/.ruby-version #{release_path}/.ruby-version"
     run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
-    run "ln -nfs #{shared_path}/vendor #{release_path}/vendor"
+    run "ln -s #{shared_path}/vendor #{release_path}/vendor"
     run "ln -nfs #{shared_path}/Gemfile #{release_path}/Gemfile"
     run "ln -nfs #{shared_path}/Gemfile.lock #{release_path}/Gemfile.lock"
-    run "RAILS_ENV=production bundle exec rake assets:precompile"
   end
  
 end

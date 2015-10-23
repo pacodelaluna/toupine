@@ -8,8 +8,8 @@
           <table class="stock-contents" id="cart-detail">
             <thead>
               <th class="cart-item-description-header" colspan="2"><%= Spree.t(:item) %></th>
-              <th class="cart-item-price-header"><%= Spree.t(:price) %></th>
-              <th class="cart-item-quantity-header"><%= Spree.t(:qty) %></th>
+              <th class="cart-item-price-header"><%= Spree.t(:qty) %></th>
+              <th class="cart-item-quantity-header"><%= Spree.t(:price) %></th>
             </thead>
             <tbody>
               <% ship_form.object.manifest.each do |item| %>
@@ -28,7 +28,7 @@
             <% ship_form.object.shipping_rates.each do |rate| %>
               <li class="shipping-method">
                 <label>
-                  <%= ship_form.radio_button :selected_shipping_rate_id, rate.id %>
+                  <%= ship_form.radio_button :selected_shipping_rate_id, rate.id, :class => "shipment_radio" %>
                   <span class="rate-name"><%= rate.name %></span>
                   <span class="rate-cost"><%= rate.display_cost %></span>
                 </label>

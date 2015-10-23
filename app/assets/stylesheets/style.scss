@@ -373,6 +373,7 @@ header .select_style_lang select:focus {
 
 .identity .half img{
     width: 100%;
+    vertical-align: middle;
 }
 
 .identity_content{
@@ -497,7 +498,7 @@ header .select_style_lang select:focus {
     top:-14px;
     left:0;
     width: 100%;
-    height:100%;
+    height: 85px;
     z-index: 12;
     -webkit-transition: all .2s ease-in;
     -moz-transition: all .2s ease-in;
@@ -508,20 +509,32 @@ header .select_style_lang select:focus {
     opacity: 0;
 }
 
-.item_content .infos .infos_overlay a{
+.item_content .infos .infos_overlay button{
     background:#594542 url(asset_path('toupine_white.png')) no-repeat 5px 4px;
     color:#fff;
     font-family: "itsadzoke", serif;
     font-size: 16px;
     display: block;
-    height: 40px;
+    height: 55px;
     padding: 22px 0 12px 35px;
     margin-top: 10px;
     text-decoration: none;
+    outline: 0;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+*:focus {
+    outline: 0;
+}
+
+.item_content .infos .infos_overlay button:hover{
+    cursor: pointer;
 }
 
 .selection .item:hover .infos_overlay{
-    
     opacity: 1;
 }
 
@@ -1469,6 +1482,11 @@ span.required{
     display: inline-block;
     font-family: 'Sugo_ExtraLight', sans-serif;
     width: 250px;
+}
+
+.shipment_radio{
+    width:auto !important;
+    margin-left: 2px;
 }
 
 #checkout .field select{
