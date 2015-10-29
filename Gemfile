@@ -50,3 +50,7 @@ gem 'spree_blogging_spree', github: 'gdsn13/spree-blogging-spree'
 #gem 'spree_related_products', github: 'spree-contrib/spree_related_products', branch: '2-4-stable'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n', branch: '2-4-stable'
 gem 'spree_simple_weight_calculator', github: 'freego/spree_simple_weight_calculator', branch: '2-4-stable'
+
+# CyberPlus gateway
+#gem 'cyber_plus_paiement', github: 'pacodelaluna/cyber_plus_paiement', branch: 'master'
+gem 'spree_cyber_plus_paiement', path: '/Volumes/HOME/paco/Workspace/ruby_apps/spree_cyber_plus_paiement'

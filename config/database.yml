@@ -9,7 +9,7 @@ development:
   encoding: utf8
   database: toupineSL
   username: root
-  password: 
+  password: password
   pool: 5
   timeout: 5000
 
@@ -22,7 +22,7 @@ test:
   encoding: utf8
   database: toupineSL_test
   username: root
-  password: 
+  password:
   pool: 5
   timeout: 5000
 
