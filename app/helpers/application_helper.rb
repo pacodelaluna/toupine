@@ -8,10 +8,6 @@ module ApplicationHelper
     images.first
   end
 
-  def bite 
-  	'bite'
-  end
-
   def current_currency
     Spree::Config[:currency]
   end
@@ -36,16 +32,16 @@ module ApplicationHelper
 
 
   def get_similar_products(product)
-    pdt = []
+    pdts = []
     i = 0
     product.taxons.first.products("RANDOM()").each do |pt|
       if pt.id != product.id && i < 4
-        pdt <<  pt
-        ++i
+        pdts << pt
+        i +=1
       end
     end
 
-    pdt
+    pdts
   end
 
 end

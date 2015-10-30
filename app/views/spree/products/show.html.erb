@@ -46,40 +46,39 @@
         
           <div class="selection_content">
             <% for product in get_similar_products (@product) %>
-    <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
-      <div class="item">
-        <div class="item_overlay"></div>
-        <div class="item_content">
-          <% image = product_images(product) %>
-          <% if image && image.attachment %>
-            <%= link_to [spree, product] do %>
-              <%= image_tag image.attachment.url(:product) %>
-            <% end %>
-          <% end %>
-          <div class="infos">
-            <div class="infos_overlay">
-              
-              <%= form_for :order, :url => populate_orders_path do |f| %>
-                  <%= hidden_field_tag "variant_id", product.master.id %>
-                  <%= hidden_field_tag :quantity, 1 %>
-                  <%= button_tag :class => 'boutton_ajouter', :id => 'add-to-cart-button', :type => :submit do %>
-                    <%= Spree.t(:add_to_cart) %>
-                  <% end %>
+              <% url = spree.product_path(product, :taxon_id => @taxon.try(:id)) %>
+                <div class="item">
+                  <div class="item_overlay"></div>
+                  <div class="item_content">
+                    <% image = product_images(product) %>
+                    <% if image && image.attachment %>
+                      <%= link_to [spree, product] do %>
+                        <%= image_tag image.attachment.url(:product) %>
+                      <% end %>
+                    <% end %>
+                    <div class="infos">
+                      <div class="infos_overlay">
+                        
+                        <%= form_for :order, :url => populate_orders_path do |f| %>
+                            <%= hidden_field_tag "variant_id", product.master.id %>
+                            <%= hidden_field_tag :quantity, 1 %>
+                            <%= button_tag :class => 'boutton_ajouter', :id => 'add-to-cart-button', :type => :submit do %>
+                              <%= Spree.t(:add_to_cart) %>
+                            <% end %>
+                        <% end %>
+                        
+                      </div>
+                      <div class="infos_left">
+                        <p><%= link_to product.name, url %></p>
+                        <p class="poids"><%= product.weight.to_i %> g</p>
+                      </div>
+                      <div class="infos_right">
+                        <%= display_price(product) %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               <% end %>
-              
-            </div>
-            <div class="infos_left">
-              <p><%= link_to product.name, url %></p>
-              <p class="poids"><%= product.weight.to_i %> g</p>
-            </div>
-            <div class="infos_right">
-              <%= display_price(product) %>
-            </div>
-          </div>
-        </div>
-      </div>
-  <% end %>
-          
         </div>
       </div>
     </div>
