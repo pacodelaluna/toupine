@@ -35,9 +35,12 @@ module ApplicationHelper
     pdts = []
     i = 0
     product.taxons.first.products("RANDOM()").each do |pt|
-      if pt.id != product.id && i < 4
+      if pt.id != product.id
         pdts << pt
-        i +=1
+        i = i + 1
+        if i >= 4
+          break
+        end
       end
     end
 
