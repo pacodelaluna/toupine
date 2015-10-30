@@ -101,7 +101,7 @@ fr:
   time:
     formats:
       blog_date: "%e %b %Y"
-  view:
+  views:
     pagination:
       next: Suivant
       last: Dernière

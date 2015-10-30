@@ -475,7 +475,7 @@ header .select_style_lang select:focus {
 }
 
 
-.item:nth-child(4n+1){
+.liste_content .item:nth-child(4n+1){
     width:24%;
     margin-right: 0;   
 }
@@ -529,14 +529,14 @@ header .select_style_lang select:focus {
 .pagination{
     clear: both; 
     display:block;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .pagination .current{
-    color:#594542;
+    color:#594542 !important;
 }
 
-.pagination .page a{
+.pagination a{
     color:#c42361;
 }
 

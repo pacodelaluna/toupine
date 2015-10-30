@@ -34,4 +34,18 @@ module ApplicationHelper
     return lang
   end
 
+
+  def get_similar_products(product)
+    pdt = []
+    i = 0
+    product.taxons.first.products("RANDOM()").each do |pt|
+      if pt.id != product.id && i < 4
+        pdt <<  pt
+        ++i
+      end
+    end
+
+    pdt
+  end
+
 end
