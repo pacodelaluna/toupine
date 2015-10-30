@@ -113,6 +113,10 @@ header ul li{
     padding: 0 !important;
 }
 
+.sml_logo img{
+    height:50px;
+}
+
 header .menu li a{
     text-transform: uppercase;
     padding: 0 20px;
@@ -471,7 +475,7 @@ header .select_style_lang select:focus {
 }
 
 
-.item:nth-child(5){
+.item:nth-child(4n+1){
     width:24%;
     margin-right: 0;   
 }
@@ -520,6 +524,20 @@ header .select_style_lang select:focus {
     margin-top: 10px;
     text-decoration: none;
     outline: 0;
+}
+
+.pagination{
+    clear: both; 
+    display:block;
+    font-size: 16px;
+}
+
+.pagination .current{
+    color:#594542;
+}
+
+.pagination .page a{
+    color:#c42361;
 }
 
 input::-moz-focus-inner { 
@@ -950,7 +968,7 @@ footer .socials a{
 }
 
 .texte_description_produit{
-    margin-bottom:10px;
+    margin-bottom:50px;
 }
 
 .description_produit h1{
@@ -1640,6 +1658,13 @@ label[for=order_email]{
 .static_page_content h2 a{
     color:#c42361;
     text-decoration: none;
+}
+
+.static_page_content h3{
+    color:#c42361;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
 #blog_entry_sidebar{
