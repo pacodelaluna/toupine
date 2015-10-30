@@ -34,7 +34,7 @@ module ApplicationHelper
   def get_similar_products(product)
     pdts = []
     i = 0
-    product.taxons.first.products("RANDOM()").each do |pt|
+    product.taxons.first.products.shuffle.each do |pt|
       if pt.id != product.id
         pdts << pt
         i = i + 1
