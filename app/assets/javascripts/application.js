@@ -12,6 +12,7 @@
 //
 //= require jquery-1.11.3.min
 //= require jquery.anystretch.min
+//= require jquery.validate/jquery.validate.min
 //= require spree
 //= require spree/frontend/checkout
 //= require spree/frontend/product
