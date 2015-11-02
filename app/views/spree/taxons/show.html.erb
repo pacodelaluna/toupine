@@ -16,9 +16,9 @@
     </div>
   </div>
   <div class="liste_content">
-    <h2><%= @taxon.name %></h2>
     <div class="liste_content">
-       <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
+      <h2><%= @taxon.name %></h2>
+      <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
     </div>
   </div>
   <% unless params[:keywords].present? %>

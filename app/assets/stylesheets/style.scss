@@ -529,7 +529,7 @@ header .select_style_lang select:focus {
 .pagination{
     clear: both; 
     display:block;
-    font-size: 18px;
+    font-size: 25px;
 }
 
 .pagination .current{
@@ -1410,6 +1410,13 @@ label[for=spree_user_remember_me]{
     color:#594542;
 }
 
+
+.recap h3{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
 /*------------------------------------------------------*/
 /*                    CHECKOUT                          */
 /*------------------------------------------------------*/
@@ -1593,6 +1600,18 @@ label[for=order_email]{
     font-size: 20px;
     color: #A70000;
     line-height: 23px;
+}
+
+.payment_method_desc{
+    font-size: 20px;
+    margin: 30px 0 50px;
+    color: #594542;
+}
+
+.payment_method_desc .small{
+    font-size: 16px;
+    color:#999;
+    padding-top: 10px;
 }
 
 /*------------------------------------------------------*/

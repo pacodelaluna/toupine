@@ -64,7 +64,7 @@ fr:
     find_a_shop: Trouver un revendeur
   order:
     validation_message: Votre commande %{order} est validée
-    validation_sub_message: Merci de nous faire confiance, vous trouverez ci dessous les details de votre commande!
+    validation_sub_message: Merci de nous faire confiance, vous trouverez ci dessous les détails de votre commande !
   link:
     back_to_the_shop: Retour à la boutique
   contact:
@@ -103,10 +103,10 @@ fr:
       blog_date: "%e %b %Y"
   views:
     pagination:
-      next: Suivant
-      last: Dernière
-      first: premières
-      previous: Précédente
+      next: Page suivante
+      last: Dernière page
+      first: Première page
+      previous: Page précédente
 
 
 
@@ -462,6 +462,7 @@ fr:
         one: ! '1 error prohibited this %{resource} from being saved:'
         other: ! '%{count} errors prohibited this %{resource} from being saved:'
   spree:
+    Colissimo: Colisimo
     title: Title
     body: Body
     summary: Summary
@@ -1145,6 +1146,11 @@ fr:
     payment_information: Choississez un moyen de paiement
     payment_method: Payment Method
     payment_methods: Payment Methods
+    payment_methods_list:
+      payer_par_cheque: Payer par chéque
+      payer_par_cb: Payer par carte bancaire
+      payer_par_paypal: Payer avec paypal
+      check_paiement_desc: Envoyez nous un chéque à l'adresse Toupine et Cabesselle, 259 Chemin de Fontgisclar, 13570 Barbentane. La commande sera traitée dès reception du paiement.<p class='small'>Pour accélérer la préparation de votre commande nous vous conseillons de privilégier un paiement par Carte Bleue ou Paypal.</p>
     payment_method_not_supported: That payment method is unsupported. Please choose another one.
     payment_processing_failed: Payment could not be processed, please check the details you entered
     payment_processor_choose_banner_text: If you need help choosing a payment processor, please visit

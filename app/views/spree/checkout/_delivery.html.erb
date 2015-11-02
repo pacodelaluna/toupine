@@ -29,8 +29,9 @@
               <li class="shipping-method">
                 <label>
                   <%= ship_form.radio_button :selected_shipping_rate_id, rate.id, :class => "shipment_radio" %>
-                  <span class="rate-name"><%= rate.name %></span>
+                  <span class="rate-name"><%= Spree.t(rate.name) %></span>
                   <span class="rate-cost"><%= rate.display_cost %></span>
+                  <span><img src="<%= asset_path rate.name + ".png" %>" width="130"></span>
                 </label>
               </li>
             <% end %>
