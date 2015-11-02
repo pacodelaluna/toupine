@@ -14,7 +14,7 @@
         <td class="cart-item-description">
           <h4><%= item.variant.name %></h4>
           <p class="line-item-description" >
-          <%= item.variant.description %>
+          <%= item.variant.description.html_safe %>
           </p>
         </td>
         <td class="cart-item-price"><%= item.quantity %></td>
