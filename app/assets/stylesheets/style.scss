@@ -1257,15 +1257,16 @@ label[for=spree_user_remember_me]{
 .td_empty_cart{width:15%; text-align: left;}
 .td_before_empty_cart{width:85%;}
 
-.shipping_cart_adjustment{
+.shipping_cart_adjustment, .promo_cart_adjustment{
     text-align: right;
     padding-right: 20px;
 }
 
-.shipping_cart_adjustment h5, .shipping_cart_adjustment_cost{
+.shipping_cart_adjustment h5, .shipping_cart_adjustment_cost, .promo_cart_adjustment h5, .promo_cart_adjustment_cost{
     font-weight: normal;
-    padding-top: 5px;
+    padding-top: 10px;
     color:#999;
+    font-size: 20px;
 }
 
 #cart-detail, #cart_buttons{
@@ -1581,6 +1582,17 @@ label[for=order_email]{
     font-weight: normal;
     font-size: 20px;
     color: #594542;
+}
+
+.pay_now{
+    padding-top: 20px;
+}
+
+.error{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #A70000;
+    line-height: 23px;
 }
 
 /*------------------------------------------------------*/

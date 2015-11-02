@@ -10,9 +10,9 @@
     <div class="centre_page_content">
       <h2><%= Spree.t(:checkout) %></h2>
       <%= checkout_progress %>
-      
+      <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
       <div id="checkout">
-        <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
+        
 
         <div class="row" >
           <div class="columns">
