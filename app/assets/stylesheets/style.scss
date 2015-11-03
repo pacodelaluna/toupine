@@ -540,6 +540,14 @@ header .select_style_lang select:focus {
     color:#c42361;
 }
 
+.pagination .first a, .pagination .prev a, .pagination .next a, .pagination .last a{
+    font-size:20px;
+    color:#594542 !important;
+}
+.pagination .first a, .pagination .next a{
+    after:" /";
+}
+
 input::-moz-focus-inner { 
   border: 0; 
 }
