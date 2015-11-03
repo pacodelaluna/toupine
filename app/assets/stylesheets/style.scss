@@ -544,8 +544,8 @@ header .select_style_lang select:focus {
     font-size:20px;
     color:#594542 !important;
 }
-.pagination .first a, .pagination .next a{
-    after:" /";
+.pagination .first:after, .pagination .next:after{
+    content:" /";
 }
 
 input::-moz-focus-inner { 
