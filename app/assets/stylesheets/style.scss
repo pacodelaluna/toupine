@@ -546,6 +546,7 @@ header .select_style_lang select:focus {
 }
 .pagination .first:after, .pagination .next:after{
     content:" /";
+    font-size:20px;
 }
 
 input::-moz-focus-inner { 
@@ -569,7 +570,7 @@ input::-moz-focus-inner {
     float:left;
     color:#594542;
     font-size: 20px;
-    max-width: 69%;
+    max-width: 62%;
     min-height: 70px;
 }
 
@@ -771,7 +772,7 @@ input::-moz-focus-inner {
 
 .presentation_pics img{
     /*margin-right:0.5%;*/
-    width: 49.5%;
+    width: 49.4%;
 }
 
 .presentation_pics img:last-child{

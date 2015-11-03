@@ -95,14 +95,14 @@
 	}
 
 	.liste_content .item{
-		width: 32% !important;
+		width: 32.4% !important;
 	}
 
-	.item:nth-child(4){
+	.liste_content .item:nth-child(3n+1){
 		margin-right: 0;
 	}
 
-	.item:nth-child(5){
+	.item:nth-child(4n+1){
 		margin-right: 1.33% !important;
 	}
 
@@ -180,6 +180,10 @@
 		margin-top: 50px !important;
 	}
 
+	.reassur_icon{
+		width:110px !important;
+	}
+
 	.reassur_icon span{
 		margin-left:20px;
 	}
@@ -235,31 +239,87 @@
 	}
 
 	footer .adresse{
-		text-align: center;
+		text-align: left;
     	width: 100% !important;
     	float: none !important;
 	}
 
 	footer .boutique{
 		clear: both !important;
-    	margin-top: 50px;
-    	width: 50% !important;
+    	width: 100% !important;
 	}
 
 	footer .blog{
 		margin-top: 50px;
-		width: 50% !important;
+		width: 100% !important;
 	}
 
 	footer .autre{
 		clear: both !important;
-    	text-align: center;
     	width: 100% !important;
     	margin-top: 50px;
 	}
 
 	.link_to_selection{
 		display: inline-block;
+	}
+
+	#cart-detail{
+		
+		table, thead, tbody, th, td, tr { 
+			display: block; 
+		}
+
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		.cart-item-image, .item-image{
+			float:left;
+			width:25%;
+		}
+
+		.cart-item-description, .item-name{
+			float:left;
+			width:67%;	
+		}
+
+		.cart-item-price, tr, .item-qty{
+			clear:both;
+		}
+
+		.cart-item-price, .cart-item-quantity, .cart-item-total, .cart-item-delete, .item-price, .item-qty{
+			float: left;
+    		min-width: 20%;
+    		margin-top: 10px;
+    		margin-bottom: 10px;
+    		padding-top: 10px;
+		}
+
+		.cart-item-quantity{
+			padding-top: 0px;
+		}
+
+		.cart-subtotal td, .cart-total td, #cart_adjustments td{
+			text-align: left;
+			display: inline-block;
+			margin-top: 20px;
+		}
+
+		.checkout_btn{
+			margin-right: 20px;
+		}
+
+		.validation_line td{
+			text-align: right;
+		}
+	}
+
+	#checkout .field label{
+		width: auto !important;
+		float:none !important;
 	}
 
 }
@@ -287,6 +347,20 @@
 	.glace{
 		display:none;
 	}
+
+	.liste_content .item{
+		width: 49.3% !important;
+	}
+
+	.liste_content .item:nth-child(4n+1), .liste_content .item:nth-child(3n+1){
+		margin-right: 1.33% !important;
+	}
+	.liste_content .item:nth-child(2n+1){
+		margin-right: 0 !important;
+	}
+	.reassur_infos{
+		width: 70% !important;
+	}
 }
 
 @media screen and (max-width:400px){
@@ -310,11 +384,6 @@
 		font-size:18px;
 		display: inline-block;
 		margin: 0 5px 10px;
-	}
-
-	.item{
-		width: 100% !important;
-		float:none !important;
 	}
 
 	.link_to_selection{
