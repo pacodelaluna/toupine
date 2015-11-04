@@ -3,7 +3,7 @@ en:
   fr: French
   submit: Send
   menu:
-    shop: shop
+    shop: Shop
     presentation: Discover
     blog: Blog
     dealer: Dealers
@@ -12,26 +12,26 @@ en:
     connect: Connect
     subscribe: Subscribe
     share: Share!
-    paiement_type: Paiement facilities
+    paiement_type: Payment facilities
   footer:
     contact: Contact us
-    who: Discover Toupine&Cabesselle
+    who: Discover Toupine et Cabesselle
     cts: General terms of seling
     delivery: Delivery
-    paiement: Secured paiement
+    paiement: Secured payment
     ml: Legals terms
-    find_a_dealer: Find a shop.
+    find_a_dealer: Find a dealer
     account: My account
-    cgv: GTS
+    cgv: General Terms and Conditions
     cookies: Cookies
     agency: Development/Design
     reassur:
       title_1: Secure Paiements
-      text_1: You can order by credit cards with or secure payment solution or with paypal.
+      text_1: You can pay by credit card or via Paypal through our secure payment solution.
       title_2: Handmade
-      text_2: All or products are handmade from fresh and quality products.
-      title_3: Delivery.
-      text_3: We send your order in 48h and it's free when your order is more than 50€.
+      text_2: All our products are handmade from fresh and quality raw materials.
+      title_3: Free delivery from 50€
+      text_3: Shipping under 48 hours at home or to a pick-up point of your choice..
   pages:
     cgv: /pages/gtc
     ml: /pages/legals-terms
@@ -43,8 +43,8 @@ en:
   home:
     hero_one: "- Invitation gustative en Provence -"
     hero_two: Discover our products
-    presentation_title: Provençal delicatessen.
-    presentation_text: Toupine Cabesselle offer you a selection of gourmet delicatessen products. Each are cooked with taste and authenticity, to underline the quality or our raw marerial.
+    presentation_title: Delicatessen from Provence.
+    presentation_text: Toupine et Cabesselle presents its range of of gourmet delicatessen products, cooked with taste and authenticity, to underline the quality of our raw marerial.
     selection_title: selected seasonal products
     selection_link: See complete selection
     sweet_products: Sweet products
@@ -57,10 +57,11 @@ en:
     new_products_permalink: new-products
     sales_products_permalink: sales
     accessories_products_permalink: accessories
-    presentation_big_text_html: <p>Toupine et Cabesselle et son chef Norbert Dusserre vous proposent de partager un instant culinaire de qualité grâce à son service traiteur et sa boutique en ligne de produits d’épicerie fine provençale. Toupine et Cabesselle, qui signifie en provençal marmite et couvercle, est née de l'association entre un père restaurateur durant plus de 20 ans et ses filles.</p>
-                                <p>Fort de  ses douze années passées en Principauté de Monaco dans de prestigieuses maisons, dont la dernière auprès d' Alain Ducasse, Norbert Dusserre a brillamment proposé de 1988 à 2012 sa cuisine gastronomique au sein de son établissement à Rognonas dont il est originaire.</p>
-                                <p>Sa cuisine raffinée et son engagement qualitatif ont été récompensés par  le titre de « Maître Restaurateur » en 2009.</p>
-                                <p>Chacun des produits Toupine et Cabesselle est cuisiné avec goût et authenticité, afin de mettre en valeur des matières premières de qualité. Cette exigence de qualité se traduit également par un contrôle sanitaire strict de tous les produits.</p>
+    presentation_big_text_html: <p>Toupine et Cabesselle, meaning pot and lid in Provencal, was born from the association between a restaurateur for over 20 years, Norbert Dusserre, and his daughter.</p>
+                                <p>Norbert Dusserre has worked for 12 years in Monaco with prestigious chiefs such as Alain Ducasse. He then proposed in his restaurant in Provence, where he originates, from 1988 to 2012 a gastronomic cuisine, which has been rewarded by the title of "Maitre Restaurateur" in 2009.</p>
+                                <p>In 2011 came the idea to share this passion for the Provencal gastronomy and create a range of delicatessen products that put great emphasis on what Provence has best, tasty vegetables and fruits, bursting with sunshine.</p>
+                                <p>Each Toupine et Cabesselle product is cooked in the traditional way, with taste and authenticity, to  enhance quality of vegetables and fruits. Close cooperation with local farmers symbolizes our desire to beautify our land which is dear to us.</p>
+                                <p>This quality requirement leads to a strict sanitary control of all the products, in partnership with CTCPA, a food research institute and analysis laboratory located in Avignon. They also help us to develop the scales to be applied for optimal conservation of our products without harming the taste and determine the deadlines for optimum utilization.</p>
     discover: Discover our service
     find_a_shop: Find a shop
   order:

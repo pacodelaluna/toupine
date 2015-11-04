@@ -158,9 +158,9 @@ fr:
         email: email
         ip_address: IP Address
         item_total: Item Total
-        number: Number
-        payment_state: Payment State
-        shipment_state: Shipment State
+        number: Numéro de commande
+        payment_state: Paiement
+        shipment_state: Envois
         special_instructions: Special Instructions
         state: State
         total: Total
@@ -512,7 +512,7 @@ fr:
       continue: Continue
       create: Create
       destroy: Destroy
-      edit: Edit
+      edit: Editer
       list: List
       listing: Listing
       new: New
@@ -642,7 +642,7 @@ fr:
     backorderable: Backorderable
     backorderable_default: Backorderable default
     backorders_allowed: backorders allowed
-    balance_due: Balance Due
+    balance_due: Non payée
     base_amount: Base Amount
     base_percent: Base Percent
     bill_address: Bill Address
@@ -780,7 +780,7 @@ fr:
     dismiss_banner: No. Thanks! I'm not interested, do not display this message again
     display: Display
     display_currency: Display currency
-    edit: Edit
+    edit: Editer
     editing_country: Editing Country
     editing_option_type: Editing Option Type
     editing_payment_method: Editing Payment Method
@@ -802,7 +802,7 @@ fr:
     editing_tax_category: Editing Tax Category
     editing_tax_rate: Editing Tax Rate
     editing_tracker: Editing Tracker
-    editing_user: Editing User
+    editing_user: Edition utilisateur
     editing_zone: Editing Zone
     eligibility_errors:
       messages:
@@ -995,7 +995,7 @@ fr:
     more: More
     move_stock_between_locations: Move Stock Between Locations
     my_account: Mon compte
-    my_orders: My Orders
+    my_orders: Mes Commandes
     name: Name
     name_on_card: Nom du porteur
     name_or_sku: Name or SKU (enter at least first 4 characters of product name)
@@ -1155,15 +1155,15 @@ fr:
     payment_processing_failed: Payment could not be processed, please check the details you entered
     payment_processor_choose_banner_text: If you need help choosing a payment processor, please visit
     payment_processor_choose_link: our payments page
-    payment_state: Payment State
+    payment_state: Paiement
     payment_states:
-      balance_due: balance due
+      balance_due: Non payé
       checkout: Valider
-      completed: completed
+      completed: Fait
       credit_owed: credit owed
       failed: failed
-      paid: paid
-      pending: pending
+      paid: Payé
+      pending: En cours
       processing: processing
       void: void
     payment_updated: Payment Updated
@@ -1369,14 +1369,14 @@ fr:
         thanks: Thank you for your business.
         track_information: ! 'Tracking Information: %{tracking}'
         track_link: ! 'Tracking Link: %{url}'
-    shipment_state: Shipment State
+    shipment_state: Livraison
     shipment_states:
-      backorder: backorder
-      canceled: canceled
-      partial: partial
-      pending: pending
-      ready: ready
-      shipped: shipped
+      backorder: Rupture de stock
+      canceled: Annulée
+      partial: Partielle
+      pending: En cours
+      ready: Prête
+      shipped: Envoyée
     shipment_transfer_success: 'Variants successfully transferred'
     shipment_transfer_error: 'There was an error transferring variants'
     shipments: Shipments
@@ -1415,7 +1415,7 @@ fr:
     state_based: State Based
     states: States
     states_required: States Required
-    status: Status
+    status: Statut
     stock_location: Stock Location
     stock_location_info: Stock location info
     stock_locations: Stock Locations
