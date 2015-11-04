@@ -968,12 +968,17 @@ footer .socials a{
     float:left;
 }
 
+.image_produit img{
+    width: 100%;
+}
+
 .image_produit{
-    width:240px;
+    width:25%;
 }
 
 .description_produit{
-    
+    width: 70%;
+    padding-left: 1%;
 }
 
 .texte_description_produit{
