@@ -18,7 +18,7 @@
       <% if order_just_completed?(@order) %>
       <h3><%= t('order.validation_sub_message') %></h3>
       <% end %>
-
+      <h3><%= flash[:error].html_safe if flash[:error]%></h3>
       <div id="order">
         <%= render :partial => 'spree/shared/order_details', :locals => { :order => @order } %>
 
