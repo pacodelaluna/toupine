@@ -39,11 +39,11 @@ img{
 
 @font-face {
   font-family: 'itsadzoke';
-  src: url(font-path('/itsadzoke-046.eot')); /* IE9 Compat Modes */
-  src: url(font-path('/itsadzoke-046.eot?#iefix')) format('embedded-opentype'), /* IE6-IE8 */
-       url(font-path('/itsadzoke-046.woff')) format('woff'), /* Modern Browsers */
-       url(font-path('/itsadzoke-046.ttf'))  format('truetype'), /* Safari, Android, iOS */
-       url(font-path('/itsadzoke-046.svg#840431dab616b630627bffafe55873b8')) format('svg'); /* Legacy iOS */
+  src: url(font-path('itsadzoke-046.eot')); /* IE9 Compat Modes */
+  src: url(font-path('itsadzoke-046.eot?#iefix')) format('embedded-opentype'), /* IE6-IE8 */
+       url(font-path('itsadzoke-046.woff')) format('woff'), /* Modern Browsers */
+       url(font-path('itsadzoke-046.ttf'))  format('truetype'), /* Safari, Android, iOS */
+       url(font-path('itsadzoke-046.svg#840431dab616b630627bffafe55873b8')) format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;
