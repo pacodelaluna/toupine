@@ -8,7 +8,7 @@
 Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
-  # config.track_inventory_levels = false
+  config.track_inventory_levels = false
   config.allow_guest_checkout = false
   config.admin_products_per_page = 50
   config.orders_per_page = 50
