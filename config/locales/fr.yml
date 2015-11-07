@@ -27,11 +27,11 @@ fr:
     agency: Réalisation/Design
     reassur:
       title_1: Paiement sécurisé
-      text_1: Vous pouvez payer par cartes bancaire ou via Paypal grâce à notre solution de paiement sécurisée
+      text_1: Vous pouvez payer par carte bancaire ou via Paypal grâce à notre solution de paiement sécurisée
       title_2: Fabrication artisanale
       text_2: Tous nos produits sont fabriqués maison à partir de matières premières fraîches et de qualité
       title_3: Livraison offerte à partir de 50€
-      text_3: Expédition sous 48h et livraison offerte à partir de 50€ d'achat.
+      text_3: Expédition sous 48h à domicile ou en point relais
   pages:
     cgv: /pages/cgv
     ml: /pages/mentions_legales
@@ -64,7 +64,7 @@ fr:
     find_a_shop: Trouver un revendeur
   order:
     validation_message: Votre commande %{order} est validée
-    validation_sub_message: Merci de nous faire confiance, vous trouverez ci dessous les détails de votre commande !
+    validation_sub_message: Merci de nous faire confiance, vous trouverez ci dessous les détails de votre commande.
   link:
     back_to_the_shop: Retour à la boutique
   contact:
@@ -462,7 +462,7 @@ fr:
         one: ! '1 error prohibited this %{resource} from being saved:'
         other: ! '%{count} errors prohibited this %{resource} from being saved:'
   spree:
-    Colissimo: Colisimo
+    colissimo: Colissimo
     title: Title
     body: Body
     summary: Summary
@@ -715,14 +715,14 @@ fr:
       US: United States of America
     coupon: Coupon
     coupon_code: Entrez un code de réduction
-    coupon_code_already_applied: The coupon code has already been applied to this order
-    coupon_code_applied: The coupon code was successfully applied to your order.
+    coupon_code_already_applied: Le code de reduction a déjà été appliqué.
+    coupon_code_applied: Le code de reduction a été appliqué à votre commande.
     coupon_code_better_exists: The previously applied coupon code results in a better deal
-    coupon_code_expired: The coupon code is expired
-    coupon_code_max_usage: Coupon code usage limit exceeded
-    coupon_code_not_eligible: This coupon code is not eligible for this order
-    coupon_code_not_found: The coupon code you entered doesn't exist. Please try again.
-    coupon_code_unknown_error: This coupon code could not be applied to the cart at this time.
+    coupon_code_expired: Le code de reduction n'est plus valide.
+    coupon_code_max_usage: La limite d'utilisation du code de reduction est atteinte.
+    coupon_code_not_eligible: Ce code de reduction ne s'applique pas à cette commande.
+    coupon_code_not_found: Le code de reduction que vous avez entré n'existe pas.
+    coupon_code_unknown_error: Ce code de reduction ne peut pas être appliqué au panier.
     customer_return: Customer Return
     customer_returns: Customer Returns
     create: Créer
@@ -999,6 +999,7 @@ fr:
     name: Name
     name_on_card: Nom du porteur
     name_or_sku: Name or SKU (enter at least first 4 characters of product name)
+    Net Weight: Poid net
     new: New
     new_adjustment: New Adjustment
     new_customer: Je M'inscris

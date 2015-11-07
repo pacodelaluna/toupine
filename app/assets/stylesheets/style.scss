@@ -493,7 +493,7 @@ header .select_style_lang select:focus {
     margin-top: 10px;
     position:relative;
     z-index: 11;
-    height: 45px;
+    height: 70px;
 }
 
 .item_content .infos .infos_overlay{
@@ -1430,6 +1430,7 @@ label[for=spree_user_remember_me]{
     text-transform: uppercase;
     margin-bottom: 20px;
     font-size: 25px;
+    color:#594542;   
 }
 /*------------------------------------------------------*/
 /*                    CHECKOUT                          */

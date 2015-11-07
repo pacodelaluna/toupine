@@ -31,7 +31,7 @@ en:
       title_2: Handmade
       text_2: All our products are handmade from fresh and quality raw materials.
       title_3: Free delivery from 50€
-      text_3: Shipping under 48 hours at home or to a pick-up point of your choice..
+      text_3: Shipping under 48 hours at home or to a pick-up point of your choice.
   pages:
     cgv: /pages/gtc
     ml: /pages/legals-terms
@@ -433,6 +433,7 @@ en:
         one: ! '1 error prohibited this %{resource} from being saved:'
         other: ! '%{count} errors prohibited this %{resource} from being saved:'
   spree:
+    colissimo: Colissimo
     abbreviation: Abbreviation
     accept: Accept
     acceptance_status: Acceptance status
@@ -932,6 +933,7 @@ en:
     name: Name
     name_on_card: Name on card
     name_or_sku: Name or SKU (enter at least first 4 characters of product name)
+    net_weight: Net Weight
     new: New
     new_adjustment: New Adjustment
     new_customer: New Customer
