@@ -700,6 +700,7 @@ fr:
     continue_shopping: Continuer mes achats
     cost_currency: Cost Currency
     cost_price: Cost Price
+    costs_string: Cost string
     could_not_connect_to_jirafe: Could not connect to Jirafe to sync data. This will be automatically retried later.
     could_not_create_customer_return: Could not create customer return
     could_not_create_stock_movement: There was a problem saving this stock movement. Please try again.
@@ -769,6 +770,7 @@ fr:
     default_refund_amount: Default Refund Amount
     default_tax: Default Tax
     default_tax_zone: Default Tax Zone
+    default_weight: Default weight
     delete: Delete
     deleted_variants_present: Some line items in this order have products that are no longer available.
     delivery: Livraison
@@ -884,6 +886,8 @@ fr:
     google_analytics_id: Analytics ID
     guest_checkout: Guest Checkout
     guest_user_account: Checkout as a Guest
+    handling_fee: Handling fee
+    handling_max: Handling max
     has_no_shipped_units: has no shipped units
     height: Height
     hide_cents: Hide cents
@@ -984,6 +988,7 @@ fr:
       all: All
       none: None
     max_items: Max Items
+    max_item_size: Max item size
     member_since: Member Since
     memo: Memo
     meta_description: Meta Description
@@ -1324,6 +1329,7 @@ fr:
     return_quantity: Return Quantity
     returned: Returned
     review: Review
+    rich_editor: Rich editor
     risk: Risk
     risk_analysis: Risk Analysis
     risky: Risky
@@ -1402,6 +1408,7 @@ fr:
     show_only_complete_orders: Only show complete orders
     show_only_considered_risky: Only show risky orders
     show_rate_in_label: Show rate in label
+    simple_weight: Simple weight
     sku: SKU
     skus: SKUs
     slug: Slug
