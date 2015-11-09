@@ -999,7 +999,7 @@ fr:
     name: Name
     name_on_card: Nom du porteur
     name_or_sku: Name or SKU (enter at least first 4 characters of product name)
-    Net Weight: Poid net
+    net_weight: Poid net
     new: New
     new_adjustment: New Adjustment
     new_customer: Je M'inscris
