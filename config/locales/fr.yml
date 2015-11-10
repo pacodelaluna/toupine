@@ -949,6 +949,7 @@ fr:
     items_to_be_reimbursed: Items to be reimbursed
     items_reimbursed: Items reimbursed
     jirafe: Jirafe
+    landing_page: Landing page
     landing_page_rule:
       path: Path
     last_name: Nom
@@ -976,6 +977,7 @@ fr:
     login_as_existing: Se connecter
     login_failed: Login authentication failed.
     login_name: Connexion
+    logourl: Logo URL
     logout: Logout
     look_for_similar_items: Look for similar items
     make_refund: Make refund
@@ -1408,10 +1410,12 @@ fr:
     show_only_complete_orders: Only show complete orders
     show_only_considered_risky: Only show risky orders
     show_rate_in_label: Show rate in label
+    signature: signature
     simple_weight: Simple weight
     sku: SKU
     skus: SKUs
     slug: Slug
+    solution: solution
     source: Source
     special_instructions: Special Instructions
     split: Split
