@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
 
-  resources :contacts, :only => [:new, :create]
+#   resources :contacts, :only => [:new, :create]
 
-  Spree::Core::Engine.routes.prepend do
+#   Spree::Core::Engine.routes.prepend do
   
-  namespace :admin do 
-    resources :contacts
-    resources :topics
-  end
+#   namespace :admin do 
+#     resources :contacts
+#     resources :topics
+#   end
   
-end
+# end
   
-  get '/contact', to: "contacts#new"
+  #get '/contact', to: "contacts#new"
 
   get '/locales', to: "locales#switch", as: :locales
   get '/distributeurs', :to => 'specials_pages#distributeurs'

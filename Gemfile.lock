@@ -96,6 +96,14 @@ GIT
     spree_gateway (2.4.0)
       spree_core (~> 2.4.0)
 
+GIT
+  remote: https://github.com/spree-contrib/spree_contact_us
+  revision: df5cec9a750c45868c818cf0e5f21c4abba2bfe4
+  branch: 2-4-stable
+  specs:
+    spree_contact_us (2.2.0)
+      spree_core (~> 2.4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -420,6 +428,7 @@ DEPENDENCIES
   spree (~> 2.4.10)
   spree_auth_devise!
   spree_blogging_spree!
+  spree_contact_us!
   spree_cyber_plus_paiement!
   spree_editor!
   spree_gateway!

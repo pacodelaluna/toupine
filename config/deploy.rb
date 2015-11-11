@@ -82,6 +82,7 @@ namespace :deploy do
  
   task :symlink_shared do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "rm -r #{release_path}/public"
     run "ln -s #{shared_path}/public #{release_path}/public"
     run "ln -nfs #{shared_path}/config/production.rb #{release_path}/config/production.rb"
     run "ln -nfs #{shared_path}/config/application.rb #{release_path}/config/application.rb"
@@ -92,7 +93,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/Gemfile #{release_path}/Gemfile"
     run "ln -nfs #{shared_path}/Gemfile.lock #{release_path}/Gemfile.lock"
   end
- 
+
 end
 
 namespace :debugging do
