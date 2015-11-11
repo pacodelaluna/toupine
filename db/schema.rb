@@ -11,23 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107090200) do
+ActiveRecord::Schema.define(version: 20151111231765) do
 
-  create_table "ckeditor_assets", force: true do |t|
-    t.string   "data_file_name",               null: false
-    t.string   "data_content_type"
-    t.integer  "data_file_size"
-    t.integer  "assetable_id"
-    t.string   "assetable_type",    limit: 30
-    t.string   "type",              limit: 30
-    t.integer  "width"
-    t.integer  "height"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "assemblies_parts", id: false, force: true do |t|
+    t.integer "assembly_id",             null: false
+    t.integer "part_id",                 null: false
+    t.integer "count",       default: 1, null: false
   end
-
-  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
-  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -43,6 +33,17 @@ ActiveRecord::Schema.define(version: 20151107090200) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "pages", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "permalink"
+    t.boolean  "published"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "meta_keywords"
+    t.string   "meta_description"
+  end
 
   create_table "spree_addresses", force: true do |t|
     t.string   "firstname"
@@ -442,6 +443,19 @@ ActiveRecord::Schema.define(version: 20151107090200) do
   add_index "spree_payments", ["payment_method_id"], name: "index_spree_payments_on_payment_method_id", using: :btree
   add_index "spree_payments", ["source_id", "source_type"], name: "index_spree_payments_on_source_id_and_source_type", using: :btree
 
+  create_table "spree_paypal_express_checkouts", force: true do |t|
+    t.string   "token"
+    t.string   "payer_id"
+    t.string   "transaction_id"
+    t.string   "state",                 default: "complete"
+    t.string   "refund_transaction_id"
+    t.datetime "refunded_at"
+    t.string   "refund_type"
+    t.datetime "created_at"
+  end
+
+  add_index "spree_paypal_express_checkouts", ["transaction_id"], name: "index_spree_paypal_express_checkouts_on_transaction_id", using: :btree
+
   create_table "spree_preferences", force: true do |t|
     t.text     "value"
     t.string   "key"
@@ -526,9 +540,9 @@ ActiveRecord::Schema.define(version: 20151107090200) do
     t.datetime "updated_at"
     t.boolean  "promotionable",        default: true
     t.string   "meta_title"
+    t.string   "net_weight"
     t.boolean  "can_be_part",          default: false, null: false
     t.boolean  "individual_sale",      default: true,  null: false
-    t.string   "net_weight"
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on", using: :btree
@@ -739,7 +753,6 @@ ActiveRecord::Schema.define(version: 20151107090200) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "discount_amount",  precision: 8, scale: 2, default: 0.0
-    t.integer  "position"
   end
 
   create_table "spree_return_authorization_reasons", force: true do |t|
