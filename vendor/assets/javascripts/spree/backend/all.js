@@ -9,6 +9,9 @@
 //= require spree/backend
 
 //= require_tree .
-//= 
+
+// TODO Check bugs in spree_product_assembly file compilation
+// require spree/backend/spree_product_assembly
+
 //= require spree/backend/spree_i18n
-//= require spree/backend/spree_product_assembly
+//= require spree/backend/spree_paypal_express

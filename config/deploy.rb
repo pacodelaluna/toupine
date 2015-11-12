@@ -1,4 +1,4 @@
-# ATTENTION: bien verifier l'URL de destination ainsi que le repository GIT. 
+# ATTENTION: bien verifier l'URL de destination ainsi que le repository GIT.
 # Ligne a commenter suivant BL ou BA: 163, 170, 183
 
 # PACOSTRANO Light Version 1.4
@@ -54,17 +54,15 @@ set :user, 'gdsn'
 
 # Repository
 set :scm, :git
-set :repository, "https://github.com/gdsn13/toupine.git"
-set :repository_cache, "git_cache"
+set :repository, "https://github.com/pacodelaluna/toupine.git"
+set :repository_cache, "git_cache_paco"
 set :deploy_via, :remote_cache
-set :ssh_options, { :forward_agent => true }
 
 set :deploy_to, "/home/www/toupine"
 set :ssh_options, { :forward_agent => true }
 set :rvm_type, :user
 
 namespace :deploy do
-
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
@@ -77,23 +75,23 @@ namespace :deploy do
     desc "#{t.to_s.capitalize} task is a no-op with mod_rails"
     task t, :roles => :app do ; end
   end
-  
-  #set :config_files, 'config/database.yml,config/customs/action_mailer.yml,config/customs/sa_config.yml,config/customs/google_analytics.yml'
- 
-  task :symlink_shared do
-    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
-    run "rm -r #{release_path}/public"
-    run "ln -s #{shared_path}/public #{release_path}/public"
-    run "ln -nfs #{shared_path}/config/production.rb #{release_path}/config/production.rb"
-    run "ln -nfs #{shared_path}/config/application.rb #{release_path}/config/application.rb"
-    run "ln -nfs #{shared_path}/.ruby-gemset #{release_path}/.ruby-gemset"
-    run "ln -nfs #{shared_path}/.ruby-version #{release_path}/.ruby-version"
-    run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
-    run "ln -s #{shared_path}/vendor #{release_path}/vendor"
-    run "ln -nfs #{shared_path}/Gemfile #{release_path}/Gemfile"
-    run "ln -nfs #{shared_path}/Gemfile.lock #{release_path}/Gemfile.lock"
-  end
 
+  #set :config_files, 'config/database.yml,config/customs/action_mailer.yml,config/customs/sa_config.yml,config/customs/google_analytics.yml'
+
+  task :symlink_shared do
+    run "rm -rf #{release_path}/public/spree"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
+    run "ln -nfs #{shared_path}/public/spree #{release_path}/public/"
+    run "ln -nfs #{shared_path}/public/ckeditor_assets #{release_path}/public/"
+    run "ln -nfs #{shared_path}/public/assets #{release_path}/public/"
+  end
+end
+
+namespace :assets do
+  task :precompile do
+    run "cd #{release_path} && rvm use ruby-2.1.5 && rvm gemset use spreetoupine && bundle exec rake assets:precompile RAILS_ENV=production"
+  end
 end
 
 namespace :debugging do
