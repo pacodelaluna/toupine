@@ -2,9 +2,9 @@
 <html>
 <head>
   <!--
-              __                                 
-             /\ \                   __           
-       ___   \_\ \     __   __  __ /\_\     __   
+              __
+             /\ \                   __
+       ___   \_\ \     __   __  __ /\_\     __
      / __`\  /'_` \  /'__`\/\ \/\ \\/\ \  /'__`\
     /\ \L\ \/\ \L\ \/\  __/\ \ \_/ |\ \ \/\  __/
     \ \____/\ \___,_\ \____\\ \___/  \ \_\ \____\
@@ -42,7 +42,7 @@
           <li><a href="<%= t('pages.presentation') %>"><%= t('menu.presentation') %></a></li>
           <li><a href="/blog"><%= t('menu.blog') %></a></li>
           <li><a href="/distributeurs"><%= t('menu.dealer') %></a></li>
-          <li><a href="/contact"><%= t('menu.contact') %></a></li>
+          <li><a href="/contact-us"><%= t('menu.contact') %></a></li>
         </ul>
         <ul class="commands">
           <li class="socials">
@@ -63,7 +63,7 @@
               <%= link_to t('menu.disconnect'), spree_logout_path, :method => :delete %>
             <% else %>
               <%= link_to t('menu.connect'), spree_login_path %> / <%= link_to t('menu.subscribe'), spree_signup_path %>
-            <% end %></li>  
+            <% end %></li>
           <li class="cart"><a href="/cart"><i class="fa fa-shopping-cart"></i><span id="link-to-cart"></span></a></li>
         </ul>
 
@@ -182,14 +182,14 @@
               <a href="https://twitter.com/home?status=www.toupine-cabesselle.com" class="twitter"><i class="fa fa-twitter"></i></i></a>
               <a href="https://pinterest.com/pin/create/button/?url=www.toupine-cabesselle.com/assets/hero-d4d8179225cfbbd96a71c1e9e2d10bfb.jpg&media=www.toupine-cabesselle.com&description=" class="pinterest"><i class="fa fa-pinterest"></i></a>
               <a href="https://plus.google.com/share?url=www.toupine-cabesselle.com" class="google-plus"><i class="fa fa-google-plus-square"></i></a>
-          </p>    
+          </p>
         </section>
       </footer>
       <div class="footer">
           © Copyright Toupine et Cabesselle 2015 - <a href="<%= t('pages.cgv') %>"><%= t('footer.cgv') %></a> - <a href="<%= t('pages.ml') %>"><%= t('footer.ml') %></a> - <%= t('footer.agency' ) %> <a href="http://www.odevie.org">Odevie</a>
       </div>
     </div>
-  	
+
 
 </body>
 </html>
