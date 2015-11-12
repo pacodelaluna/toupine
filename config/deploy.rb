@@ -1,4 +1,4 @@
-# ATTENTION: bien verifier l'URL de destination ainsi que le repository GIT. 
+# ATTENTION: bien verifier l'URL de destination ainsi que le repository GIT.
 # Ligne a commenter suivant BL ou BA: 163, 170, 183
 
 # PACOSTRANO Light Version 1.4
@@ -54,17 +54,15 @@ set :user, 'gdsn'
 
 # Repository
 set :scm, :git
-set :repository, "https://github.com/gdsn13/toupine.git"
-set :repository_cache, "git_cache"
+set :repository, "https://github.com/pacodelaluna/toupine.git"
+set :repository_cache, "git_cache_paco"
 set :deploy_via, :remote_cache
-set :ssh_options, { :forward_agent => true }
 
 set :deploy_to, "/home/www/toupine"
 set :ssh_options, { :forward_agent => true }
 set :rvm_type, :user
 
 namespace :deploy do
-
   desc "Restarting mod_rails with restart.txt"
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "touch #{current_path}/tmp/restart.txt"
@@ -86,6 +84,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
     run "ln -nfs #{shared_path}/public/spree #{release_path}/public/"
     run "ln -nfs #{shared_path}/public/ckeditor_assets #{release_path}/public/"
+    run "ln -nfs #{shared_path}/public/assets #{release_path}/public/"
   end
 end
 
