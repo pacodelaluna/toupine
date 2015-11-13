@@ -702,6 +702,9 @@ fr:
     confirm: Confirm
     confirm_delete: Confirm Deletion
     confirm_password: Confirmation
+    contact_us:
+      notices:
+        error: "Une erreur est survenue, merci d'essayer plus tard ou de nous joindre directement via l'adresse contact@toupine-cabeselle.com"
     continue: Continue
     continue_shopping: Continuer mes achats
     cost_currency: Cost Currency

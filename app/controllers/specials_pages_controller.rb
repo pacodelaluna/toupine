@@ -9,4 +9,8 @@ class SpecialsPagesController < ApplicationController
 
   def distributeurs
   end
+
+  def contact
+    @taxonomies = Spree::Taxonomy.includes(root: :children)
+  end
 end

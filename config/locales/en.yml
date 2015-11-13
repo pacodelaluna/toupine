@@ -635,6 +635,9 @@ en:
     confirm: Confirm
     confirm_delete: Confirm Deletion
     confirm_password: Password Confirmation
+    contact_us:
+      notices:
+        error: "Something went wrong, please try later or use our mail contact@toupine-cabesselle.com. Thank you."
     continue: Continue
     continue_shopping: Continue shopping
     cost_currency: Cost Currency

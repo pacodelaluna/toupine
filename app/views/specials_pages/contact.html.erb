@@ -1,0 +1,19 @@
+<section class="logo_headline logo_distributeurs">
+    <%= image_tag "logo.png" %>
+</section>
+
+<section class="content_produit">
+	<div class="categories">
+		<div class="categories_content">
+			<h2><a href="/boutique"><%= t('menu.shop') %></a></h2>
+			<%= render :partial => 'spree/shared/left_taxo' %>
+		</div>
+	</div>
+	<div class="liste">
+		<div class="liste_content">
+			<h2><%= t('menu.contact') %></h2>
+			<p class="notice"><%= flash[:notice]%></p>
+			<p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue inline_link' %></p>
+  		</div>
+	</div>
+</section>
