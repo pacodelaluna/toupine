@@ -78,7 +78,7 @@ fr:
       message: Message
       sent: Envoyé le
       submit: Envoyer
-  products:
+  products_page:
     share_me: "Partagez moi "
     also_like: VOUS ALLEZ AUSSI AIMER
 

@@ -27,7 +27,7 @@
               <%= render :partial => 'cart_form' %>
           </div>
           <div id="social_share_btn">
-            <h3><%= t('products.share_me') %>:</h3>
+            <h3><%= t('products_page.share_me') %>:</h3>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<%= request.protocol %><%= request.host_with_port %><%= request.path.gsub("//","/") %>" class="social_share facebook"><i class="fa fa-facebook"></i>Facebook</a>
             <a href="https://twitter.com/share"
                   data-lang="fr"
@@ -42,7 +42,7 @@
       </div>
       <div class="selection clear produit_selection">
       
-        <h2><span><%= t('products.also_like') %></span></h2>
+        <h2><span><%= t('products_page.also_like') %></span></h2>
         
           <div class="selection_content">
             <% for product in get_similar_products (@product) %>
