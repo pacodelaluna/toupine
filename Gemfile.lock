@@ -24,11 +24,10 @@ GIT
 
 GIT
   remote: git://github.com/pacodelaluna/spree-product-assembly.git
-  revision: d8ba3b612dfc580456a1b43680f0ea52f008e2f1
-  branch: 2-4-beta
+  revision: d37da453c5f92c7d82d5cf11e04ee965c91e3ca7
+  branch: 2-4-stable
   specs:
-    spree_product_assembly (2.2.0.beta)
-      active_model_serializers (= 0.9.0.alpha1)
+    spree_product_assembly (2.4.0.beta)
       spree_backend (~> 2.4.0)
 
 GIT
@@ -121,8 +120,6 @@ GEM
       activesupport (= 4.1.11)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active_model_serializers (0.9.0.alpha1)
-      activemodel (>= 3.2)
     active_utils (2.2.3)
       activesupport (>= 2.3.11)
       i18n
