@@ -5,13 +5,13 @@
 <section class="content_produit">
 	<div class="categories">
 		<div class="categories_content">
-			<h2><a href="/boutique">Boutique</a></h2>
+			<h2><a href="/boutique"><%= t('menu.shop') %></a></h2>
 			<%= render :partial => 'spree/shared/left_taxo' %>
 		</div>
 	</div>
 	<div class="liste">
 		<div class="liste_content">
-			<h2>Nos produits</h2>
+			<h2><%= t('menu.our_products') %></h2>
 			<% cache(cache_key_for_products) do %>
     			<%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
   			<% end %>

@@ -13,6 +13,7 @@ en:
     subscribe: Subscribe
     share: Share!
     paiement_type: Payment facilities
+    our_products: Our products
   footer:
     contact: Contact us
     who: Discover Toupine et Cabesselle
@@ -79,6 +80,9 @@ en:
       message: Message
       sent: Sent on
       submit: Send
+  products:
+    share_me: Share me:
+    also_like: You will also like
 
 
   activerecord:

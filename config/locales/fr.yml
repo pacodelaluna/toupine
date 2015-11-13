@@ -13,6 +13,7 @@ fr:
     subscribe: Inscription
     share: Partagez !
     paiement_type: Modes de paiement
+    our_products: Nos produits
   footer:
     contact: Nous contacter
     who: Qui sommes-nous ?
@@ -77,6 +78,11 @@ fr:
       message: Message
       sent: Envoyé le
       submit: Envoyer
+  products:
+    share_me: Partagez moi :
+    also_like: VOUS ALLEZ AUSSI AIMER
+
+    
   activerecord:
     models:
       spree/blog_entry:
