@@ -70,7 +70,7 @@
                       </div>
                       <div class="infos_left">
                         <p><%= link_to product.name, url %></p>
-                        <p class="poids"><%= product.weight.to_i %> g</p>
+                        <p class="poids"><%= product.net_weight %> g</p>
                       </div>
                       <div class="infos_right">
                         <%= display_price(product) %>
