@@ -10,7 +10,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
+ActiveRecord::Schema.define(version: 20151111231765) do
 
   create_table "assemblies_parts", id: false, force: true do |t|
     t.integer "assembly_id",             null: false

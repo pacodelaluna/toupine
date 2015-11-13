@@ -1492,8 +1492,19 @@ label[for=spree_user_remember_me]{
     border-bottom: 1px solid #aca2a0;
 }
 
-#checkout fieldset .field br{
+#checkout fieldset .field br, .contact_left .field br{
     display:none;
+}
+
+.contact_left .field span.required{
+    display: block;
+    float: left;
+    margin-top: 11px;
+    margin-right:-15px !important;
+}
+
+.contact_left .field input, .contact_left .field textarea{
+    width: 50%;
 }
 
 #checkout .field, .contact_left p{

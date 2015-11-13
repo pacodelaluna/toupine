@@ -26,7 +26,7 @@ en:
     cookies: Cookies
     agency: Development/Design
     reassur:
-      title_1: Secure Paiements
+      title_1: Secure Payments
       text_1: You can pay by credit card or via Paypal through our secure payment solution.
       title_2: Handmade
       text_2: All our products are handmade from fresh and quality raw materials.
@@ -43,14 +43,14 @@ en:
   home:
     hero_one: "- Invitation gustative en Provence -"
     hero_two: Discover our products
-    presentation_title: Delicatessen from Provence.
-    presentation_text: Toupine et Cabesselle presents its range of of gourmet delicatessen products, cooked with taste and authenticity, to underline the quality of our raw marerial.
+    presentation_title: Delicatessen from Provence
+    presentation_text: Toupine et Cabesselle presents its range of gourmet delicatessen products, cooked with taste and authenticity, to underline the quality of our raw marerial.
     selection_title: selected seasonal products
     selection_link: See complete selection
     sweet_products: Sweet products
     salted_products: Salted products
     new_products: New Product
-    sales_products: Sales
+    sales_products: Gourmet boxes
     accessories_products: Accessories
     sweet_products_permalink: sweet-products
     salted_products_permalink: salted-products
