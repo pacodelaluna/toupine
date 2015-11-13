@@ -79,10 +79,10 @@ fr:
       sent: Envoyé le
       submit: Envoyer
   products:
-    share_me: Partagez moi :
+    share_me: "Partagez moi "
     also_like: VOUS ALLEZ AUSSI AIMER
 
-    
+
   activerecord:
     models:
       spree/blog_entry:

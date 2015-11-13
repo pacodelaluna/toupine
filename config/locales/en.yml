@@ -70,6 +70,9 @@ en:
     validation_sub_message: Thanks to trust us, you will find below your order details!
   link:
     back_to_the_shop: Back to the shop
+  products_page:
+    share_me: Share me
+    also_like: You will also like
   contact:
     new:
       contact: Contact us
@@ -80,10 +83,7 @@ en:
       message: Message
       sent: Sent on
       submit: Send
-  products:
-    share_me: Share me:
-    also_like: You will also like
-
+  
 
   activerecord:
     attributes:
