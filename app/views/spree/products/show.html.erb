@@ -36,7 +36,7 @@
                   class="social_share twitter">
                   <i class="fa fa-twitter"></i>Twitter
             </a>
-            <a href='http://pinterest.com/pin/create/bookmarklet/?media=<%= product_image(@product) %>&url=<%= request.protocol %><%= request.host_with_port %><%= request.path.gsub("//","/") %>&is_video=false&description=<%= @product.name %>' class="social_share pinterest"><i class="fa fa-pinterest-p"></i>Pint-it</a>
+            <a href='http://pinterest.com/pin/create/bookmarklet/?media=<%= request.protocol %><%= request.host_with_port %><%= @product.images.first.attachment.url %>&url=<%= request.protocol %><%= request.host_with_port %><%= @product.images.first.attachment.url %>&is_video=false&description=<%= @product.name %>' class="social_share pinterest"><i class="fa fa-pinterest-p"></i>Pint-it</a>
           </div>
         </div>
       </div>
