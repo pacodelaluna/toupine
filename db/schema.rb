@@ -10,13 +10,24 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema.define(version: 20151111231765) do
 
-  create_table "assemblies_parts", id: false, force: true do |t|
-    t.integer "assembly_id",             null: false
-    t.integer "part_id",                 null: false
-    t.integer "count",       default: 1, null: false
+ActiveRecord::Schema.define(version: 20151113172023) do
+
+  create_table "ckeditor_assets", force: true do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+  add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -752,6 +763,7 @@ ActiveRecord::Schema.define(version: 20151111231765) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "discount_amount",  precision: 8, scale: 2, default: 0.0
+    t.integer  "position"
   end
 
   create_table "spree_return_authorization_reasons", force: true do |t|

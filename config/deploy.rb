@@ -83,7 +83,7 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     run "ln -nfs #{shared_path}/config/secrets.yml #{release_path}/config/secrets.yml"
     run "ln -nfs #{shared_path}/public/spree #{release_path}/public/"
-    run "ln -nfs #{shared_path}/public/ckeditor_assets #{release_path}/public/"
+    # Hack because Precompilation not Automated
     run "ln -nfs #{shared_path}/public/assets #{release_path}/public/"
   end
 end
