@@ -1,5 +1,3 @@
-
-
 <section class="page">
   <div class="categories">
     <div class="categories_content">
@@ -15,31 +13,21 @@
         <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
         <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
           <% if SpreeContactUs.require_name %>
-            <p>
-              <%= f.label :name %>
-              <span class="required">*</span><br/>
+            <p class="field">
+              <%= f.label :name %><span class="required">*</span><br />
               <%= f.text_field :name, class: 'required' %>
             </p>
           <% end %>
-          <p>
-            <%= f.label :email %>
-            <span class="required">*</span><br/>
+          <p class="field">
+            <%= f.label :email %><span class="required">*</span><br />
             <%= f.email_field :email, class: 'required email' %>
           </p>
-          <% if SpreeContactUs.require_subject %>
-            <p>
-              <%= f.label :subject %>
-              <span class="required">*</span><br/>
-              <%= f.text_field :subject, class: 'required' %>
-            </p>
-          <% end %>
-          <p>
-            <%= f.label :message %>
-            <span class="required">*</span><br/>
+          <p class="field">
+            <%= f.label :message %><span class="required">*</span><br/>
             <%= f.text_area :message, class: 'required' %>
           </p>
-          <p>
-            <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
+          <p class="field">
+            <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit), :class => "checkout_btn" %>
           </p>
         <% end %>
       </div>
@@ -48,7 +36,7 @@
         <p class="phone_number">06 17 96 06 42</p>
         <p class="mail_address">contact@toupine-cabesselle.com</p>
         <p class="address">
-          259 Chemin de Fontfgisclar<br>
+          259 Chemin de Fontgisclar<br>
           13570 Barbentane
         </p>
       </div>
