@@ -55,3 +55,5 @@ gem 'spree_cyber_plus_paiement', github: 'gdsn13/cyber_plus_paiement', branch: '
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
 gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings', branch: '2-4-stable'
 gem 'spree_contact_us', :git => 'https://github.com/spree-contrib/spree_contact_us', branch: '2-4-stable'
+
+gem 'exception_notification'
