@@ -54,7 +54,7 @@ set :user, 'gdsn'
 
 # Repository
 set :scm, :git
-set :repository, "https://github.com/pacodelaluna/toupine.git"
+set :repository, "https://github.com/gdsn13/toupine.git"
 set :repository_cache, "git_cache_paco"
 set :deploy_via, :remote_cache
 
@@ -90,6 +90,7 @@ end
 
 namespace :assets do
   task :precompile do
+    # Not working because of issue with RVM and Capistrano
     run "cd #{release_path} && rvm use ruby-2.1.5 && rvm gemset use spreetoupine && bundle exec rake assets:precompile RAILS_ENV=production"
   end
 end
